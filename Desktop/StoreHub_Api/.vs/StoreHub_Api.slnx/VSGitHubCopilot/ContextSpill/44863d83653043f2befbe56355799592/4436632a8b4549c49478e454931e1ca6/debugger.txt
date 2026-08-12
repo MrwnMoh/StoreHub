@@ -1,0 +1,190 @@
+﻿## EXCEPTION
+Exception Type: System.ObjectDisposedException
+Exception Message: Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling 'Dispose' on the context instance, or wrapping it in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'AppDbContext'.
+Piece of code that has the exception:
+```csharp E:\Marwan\My projects\C#\StoreHub\StoreHub_Data\Classes\People\PeopleData.cs
+16:         public static async Task<DTO_Person> FindPersonByEmail(string email)
+17:         {
+18: 
+19:             try
+20:             {
+21:                 using var context = CreateContext();
+22: 
+23:                 var result = await context.People.Select(p => new { p.FirstName, p.LastName, p.Email, p.CountryId, p.Address, p.IsMale, p.IsActive, p.ImagePath, p.IsSeller, p.PasswordHash, p.IsAdmin, p.RegisterAt, p.BirthDate, p.Phone }
+24:                 ).FirstOrDefaultAsync(p => p.Email == email);
+25: 
+26:                 if (result == null)
+27:                     return null;
+28: 
+29:                 DTO_Person person = new DTO_Person();
+30:                 person.Address = result.Address;
+31:                 person.FirstName = result.FirstName;
+32:                 person.LastName = result.LastName;
+33:                 person.Email = email;
+34:                 person.CountryId = result.CountryId;
+35:                 person.ImagePath = result.ImagePath;
+36:                 person.RegisterAt = result.RegisterAt;
+37:                 person.BirthDate = result.BirthDate;
+38:                 person.Phone = result.Phone;
+39:                 person.IsActive = result.IsActive;
+40:                 person.IsAdmin = result.IsAdmin;
+41:                 person.IsSeller = result.IsSeller;
+42:                 person.IsMale = result.IsMale;
+43:                 person.PasswordHash = result.PasswordHash;
+44: 
+45:                 return person;
+46:             }
+47:             catch (Exception ex) 
+48:             {
+49:                 throw ex;
+50:             }
+51:             
+52: 
+53:         }
+```
+Exception is on line 47
+This exception was originally thrown at this call stack:
+[1] Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+[2] Microsoft.EntityFrameworkCore.DbContext.ContextServices.get()
+[3] Microsoft.EntityFrameworkCore.DbContext.Model.get()
+[4] Microsoft.EntityFrameworkCore.Internal.InternalDbSet<TEntity>.EntityType.get()
+[5] Microsoft.EntityFrameworkCore.Internal.InternalDbSet<TEntity>.CheckState()
+[6] Microsoft.EntityFrameworkCore.Internal.InternalDbSet<TEntity>.EntityQueryable.get()
+[7] Microsoft.EntityFrameworkCore.Internal.InternalDbSet<TEntity>.System.Linq.IQueryable.Provider.get()
+[8] System.Linq.Queryable.Select<TSource, TResult>(System.Linq.IQueryable<TSource>, System.Linq.Expressions.Expression<System.Func<TSource, TResult>>)
+[9] StoreHub_Data.Classes.People.PeopleData.FindPersonByEmail(string) in PeopleData.cs
+Code for the stack frame:
+```csharp ..\StoreHub_Data\Classes\People\PeopleData.cs
+16:         public static async Task<DTO_Person> FindPersonByEmail(string email)
+17:         {
+18: 
+19:             try
+20:             {
+21:                 using var context = CreateContext();
+22: 
+23:                 var result = await context.People.Select(p => new { p.FirstName, p.LastName, p.Email, p.CountryId, p.Address, p.IsMale, p.IsActive, p.ImagePath, p.IsSeller, p.PasswordHash, p.IsAdmin, p.RegisterAt, p.BirthDate, p.Phone }
+24:                 ).FirstOrDefaultAsync(p => p.Email == email);
+25: 
+26:                 if (result == null)
+27:                     return null;
+28: 
+29:                 DTO_Person person = new DTO_Person();
+30:                 person.Address = result.Address;
+31:                 person.FirstName = result.FirstName;
+32:                 person.LastName = result.LastName;
+33:                 person.Email = email;
+34:                 person.CountryId = result.CountryId;
+35:                 person.ImagePath = result.ImagePath;
+36:                 person.RegisterAt = result.RegisterAt;
+37:                 person.BirthDate = result.BirthDate;
+38:                 person.Phone = result.Phone;
+39:                 person.IsActive = result.IsActive;
+40:                 person.IsAdmin = result.IsAdmin;
+41:                 person.IsSeller = result.IsSeller;
+42:                 person.IsMale = result.IsMale;
+43:                 person.PasswordHash = result.PasswordHash;
+44: 
+45:                 return person;
+46:             }
+47:             catch (Exception ex) 
+48:             {
+49:                 throw ex;
+50:             }
+51:             
+52: 
+53:         }
+```
+Current statement: lines 23-24
+The callstack context, if included, corresponds to the thread where this exception occurred. There is no need to identify this thread by other means.
+The top most frame in the callstack context should correspond to the place the exception message was thrown from. Code may or may not have been provided for it but can be requested.
+
+## CALLSTACK
+Thread ID: 57592
+[1] StoreHub_Data.dll!StoreHub_Data.Classes.People.PeopleData.FindPersonByEmail
+This is the current user focused stack frame. The provided locals context corresponds to this stack frame, but you may evaluate expressions and retrieve code for any frame.
+Code for the stack frame:
+```csharp ..\StoreHub_Data\Classes\People\PeopleData.cs
+16:         public static async Task<DTO_Person> FindPersonByEmail(string email)
+17:         {
+18: 
+19:             try
+20:             {
+21:                 using var context = CreateContext();
+22: 
+23:                 var result = await context.People.Select(p => new { p.FirstName, p.LastName, p.Email, p.CountryId, p.Address, p.IsMale, p.IsActive, p.ImagePath, p.IsSeller, p.PasswordHash, p.IsAdmin, p.RegisterAt, p.BirthDate, p.Phone }
+24:                 ).FirstOrDefaultAsync(p => p.Email == email);
+25: 
+26:                 if (result == null)
+27:                     return null;
+28: 
+29:                 DTO_Person person = new DTO_Person();
+30:                 person.Address = result.Address;
+31:                 person.FirstName = result.FirstName;
+32:                 person.LastName = result.LastName;
+33:                 person.Email = email;
+34:                 person.CountryId = result.CountryId;
+35:                 person.ImagePath = result.ImagePath;
+36:                 person.RegisterAt = result.RegisterAt;
+37:                 person.BirthDate = result.BirthDate;
+38:                 person.Phone = result.Phone;
+39:                 person.IsActive = result.IsActive;
+40:                 person.IsAdmin = result.IsAdmin;
+41:                 person.IsSeller = result.IsSeller;
+42:                 person.IsMale = result.IsMale;
+43:                 person.PasswordHash = result.PasswordHash;
+44: 
+45:                 return person;
+46:             }
+47:             catch (Exception ex) 
+48:             {
+49:                 throw ex;
+50:             }
+51:             
+52: 
+53:         }
+```
+Current statement: line 47
+[2] StoreHub_Business.dll!StoreHub_Business.People.FindPersonByEmail
+Code for the stack frame:
+```csharp ..\StoreHub_Business\People.cs
+16:         public static async Task<DTO_Person> FindPersonByEmail(string email)
+17:         {
+18:             var person = await PeopleData.FindPersonByEmail(email);
+19: 
+20: 
+21:             return person;
+22:         }
+```
+Current statement: line 18
+[3] StoreHub_Api.dll!StoreHub_Api.Controllers.AuthController.Login
+Code for the stack frame:
+```csharp Controllers\AuthController.cs
+17:         [HttpPost("Login")]
+18:         public async Task<ActionResult<DTO_Person>> Login([FromBody] DTO_LoginRequest request)
+19:         {
+20: 
+21:             if (request == null || string.IsNullOrWhiteSpace(request.Email) || string.IsNullOrWhiteSpace(request.Password))
+22:             {
+23:                 return BadRequest("Credentials are required");
+24:             }
+25: 
+26:             DTO_Person person = await People.FindPersonByEmail(request.Email);
+27: 
+28:             if(person  == null)
+29:                 return Unauthorized("Invalid Credentials.");
+30: 
+31:             return person;
+32: 
+33: 
+34: 
+35: 
+36:         }
+```
+Current statement: line 26
+[4] [External Code]
+
+## LOCALS
+Variable: 'email' of type 'string' has value: "string"
+Variable: 'ex' of type 'System.Exception' is a complex object with child properties and has value: null
+

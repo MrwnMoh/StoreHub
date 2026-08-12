@@ -1,0 +1,152 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Marwan\\My projects\\C#\\StoreHub\\StoreHub_Api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{671C552A-8180-455F-41C2-240EEF13DC07}|StoreHub_Api.csproj|e:\\marwan\\my projects\\c#\\storehub\\storehub_api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{671C552A-8180-455F-41C2-240EEF13DC07}|StoreHub_Api.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71629123-AB21-E976-F6E1-375F3EB940AC}|..\\StoreHub_Business\\StoreHub_Business.csproj|e:\\marwan\\my projects\\c#\\storehub\\storehub_business\\products\\clsproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE111FF-BE8F-0E92-7A97-B99997F76FAA}|..\\StoreHub_Data\\StoreHub_Data.csproj|e:\\marwan\\my projects\\c#\\storehub\\storehub_data\\classes\\products\\productsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{671C552A-8180-455F-41C2-240EEF13DC07}|StoreHub_Api.csproj|e:\\marwan\\my projects\\c#\\storehub\\storehub_api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{671C552A-8180-455F-41C2-240EEF13DC07}|StoreHub_Api.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{671C552A-8180-455F-41C2-240EEF13DC07}|StoreHub_Api.csproj|e:\\marwan\\my projects\\c#\\storehub\\storehub_api\\controllers\\peoplecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{671C552A-8180-455F-41C2-240EEF13DC07}|StoreHub_Api.csproj|solutionrelative:controllers\\peoplecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{671C552A-8180-455F-41C2-240EEF13DC07}|StoreHub_Api.csproj|e:\\marwan\\my projects\\c#\\storehub\\storehub_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{671C552A-8180-455F-41C2-240EEF13DC07}|StoreHub_Api.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71629123-AB21-E976-F6E1-375F3EB940AC}|..\\StoreHub_Business\\StoreHub_Business.csproj|e:\\marwan\\my projects\\c#\\storehub\\storehub_business\\other\\clstokens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE111FF-BE8F-0E92-7A97-B99997F76FAA}|..\\StoreHub_Data\\StoreHub_Data.csproj|e:\\marwan\\my projects\\c#\\storehub\\storehub_data\\classes\\login\\logindata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PeopleController.cs",
+              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\StoreHub_Api\\Controllers\\PeopleController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PeopleController.cs",
+              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\StoreHub_Api\\Controllers\\PeopleController.cs",
+              "RelativeToolTip": "Controllers\\PeopleController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T13:47:29.959Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "clsProducts.cs",
+              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\StoreHub_Business\\Products\\clsProducts.cs",
+              "RelativeDocumentMoniker": "..\\StoreHub_Business\\Products\\clsProducts.cs",
+              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\StoreHub_Business\\Products\\clsProducts.cs",
+              "RelativeToolTip": "..\\StoreHub_Business\\Products\\clsProducts.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAA1wEoAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-12T14:49:34.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductsData.cs",
+              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\StoreHub_Data\\Classes\\Products\\ProductsData.cs",
+              "RelativeDocumentMoniker": "..\\StoreHub_Data\\Classes\\Products\\ProductsData.cs",
+              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\StoreHub_Data\\Classes\\Products\\ProductsData.cs",
+              "RelativeToolTip": "..\\StoreHub_Data\\Classes\\Products\\ProductsData.cs",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAmwMEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-12T12:55:31.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\StoreHub_Api\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\StoreHub_Api\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAQwKMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T18:31:35.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\StoreHub_Api\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\StoreHub_Api\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-10T13:26:58.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "clsTokens.cs",
+              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\StoreHub_Business\\Other\\clsTokens.cs",
+              "RelativeDocumentMoniker": "..\\StoreHub_Business\\Other\\clsTokens.cs",
+              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\StoreHub_Business\\Other\\clsTokens.cs",
+              "RelativeToolTip": "..\\StoreHub_Business\\Other\\clsTokens.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAACEAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T13:22:27.042Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginData.cs",
+              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\StoreHub_Data\\Classes\\Login\\LoginData.cs",
+              "RelativeDocumentMoniker": "..\\StoreHub_Data\\Classes\\Login\\LoginData.cs",
+              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\StoreHub_Data\\Classes\\Login\\LoginData.cs",
+              "RelativeToolTip": "..\\StoreHub_Data\\Classes\\Login\\LoginData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T09:43:07.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\StoreHub_Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\StoreHub_Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T08:40:01.232Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

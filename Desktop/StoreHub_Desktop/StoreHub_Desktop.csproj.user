@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Forms\Global\frmDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\frmMainApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Prouducts\frmProductsDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="User Controls\BigBanner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Products\HomeProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Products\Reviews\uctrlUserReview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Products\Reviews\uctrlWriteAReview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Products\uctrlProductSamary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

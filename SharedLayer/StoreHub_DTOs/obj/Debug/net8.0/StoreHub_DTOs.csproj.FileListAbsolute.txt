@@ -1,0 +1,12 @@
+E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\bin\Debug\net8.0\StoreHub_DTOs.deps.json
+E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\bin\Debug\net8.0\StoreHub_DTOs.dll
+E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\bin\Debug\net8.0\StoreHub_DTOs.pdb
+E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.csproj.AssemblyReference.cache
+E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.GeneratedMSBuildEditorConfig.editorconfig
+E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.AssemblyInfoInputs.cache
+E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.AssemblyInfo.cs
+E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.csproj.CoreCompileInputs.cache
+E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.dll
+E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\refint\StoreHub_DTOs.dll
+E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.pdb
+E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\ref\StoreHub_DTOs.dll

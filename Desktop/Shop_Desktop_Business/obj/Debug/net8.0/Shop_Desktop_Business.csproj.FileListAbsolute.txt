@@ -1,0 +1,15 @@
+E:\Marwan\My projects\C#\StoreHub\Desktop\Shop_Desktop_Business\bin\Debug\net8.0\Shop_Desktop_Business.deps.json
+E:\Marwan\My projects\C#\StoreHub\Desktop\Shop_Desktop_Business\bin\Debug\net8.0\Shop_Desktop_Business.dll
+E:\Marwan\My projects\C#\StoreHub\Desktop\Shop_Desktop_Business\bin\Debug\net8.0\Shop_Desktop_Business.pdb
+E:\Marwan\My projects\C#\StoreHub\Desktop\Shop_Desktop_Business\bin\Debug\net8.0\StoreHub_DTOs.dll
+E:\Marwan\My projects\C#\StoreHub\Desktop\Shop_Desktop_Business\bin\Debug\net8.0\StoreHub_DTOs.pdb
+E:\Marwan\My projects\C#\StoreHub\Desktop\Shop_Desktop_Business\obj\Debug\net8.0\Shop_Desktop_Business.csproj.AssemblyReference.cache
+E:\Marwan\My projects\C#\StoreHub\Desktop\Shop_Desktop_Business\obj\Debug\net8.0\Shop_Desktop_Business.GeneratedMSBuildEditorConfig.editorconfig
+E:\Marwan\My projects\C#\StoreHub\Desktop\Shop_Desktop_Business\obj\Debug\net8.0\Shop_Desktop_Business.AssemblyInfoInputs.cache
+E:\Marwan\My projects\C#\StoreHub\Desktop\Shop_Desktop_Business\obj\Debug\net8.0\Shop_Desktop_Business.AssemblyInfo.cs
+E:\Marwan\My projects\C#\StoreHub\Desktop\Shop_Desktop_Business\obj\Debug\net8.0\Shop_Desktop_Business.csproj.CoreCompileInputs.cache
+E:\Marwan\My projects\C#\StoreHub\Desktop\Shop_Desktop_Business\obj\Debug\net8.0\Shop_Des.CB211EB2.Up2Date
+E:\Marwan\My projects\C#\StoreHub\Desktop\Shop_Desktop_Business\obj\Debug\net8.0\Shop_Desktop_Business.dll
+E:\Marwan\My projects\C#\StoreHub\Desktop\Shop_Desktop_Business\obj\Debug\net8.0\refint\Shop_Desktop_Business.dll
+E:\Marwan\My projects\C#\StoreHub\Desktop\Shop_Desktop_Business\obj\Debug\net8.0\Shop_Desktop_Business.pdb
+E:\Marwan\My projects\C#\StoreHub\Desktop\Shop_Desktop_Business\obj\Debug\net8.0\ref\Shop_Desktop_Business.dll

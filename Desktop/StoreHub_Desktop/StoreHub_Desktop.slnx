@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="../../SharedLayer/StoreHub_DTOs/StoreHub_DTOs.csproj" />
+  <Project Path="../Shop_Desktop_Business/Shop_Desktop_Business.csproj" />
+  <Project Path="StoreHub_Desktop.csproj" />
+</Solution>

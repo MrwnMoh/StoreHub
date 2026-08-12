@@ -1,0 +1,17 @@
+E:\Marwan\My projects\C#\StoreHub\StoreHub_Data\bin\Debug\net8.0\StoreHub_Data.deps.json
+E:\Marwan\My projects\C#\StoreHub\StoreHub_Data\bin\Debug\net8.0\StoreHub_Data.dll
+E:\Marwan\My projects\C#\StoreHub\StoreHub_Data\bin\Debug\net8.0\StoreHub_Data.pdb
+E:\Marwan\My projects\C#\StoreHub\StoreHub_Data\obj\Debug\net8.0\StoreHub_Data.GeneratedMSBuildEditorConfig.editorconfig
+E:\Marwan\My projects\C#\StoreHub\StoreHub_Data\obj\Debug\net8.0\StoreHub_Data.AssemblyInfoInputs.cache
+E:\Marwan\My projects\C#\StoreHub\StoreHub_Data\obj\Debug\net8.0\StoreHub_Data.AssemblyInfo.cs
+E:\Marwan\My projects\C#\StoreHub\StoreHub_Data\obj\Debug\net8.0\StoreHub_Data.csproj.CoreCompileInputs.cache
+E:\Marwan\My projects\C#\StoreHub\StoreHub_Data\obj\Debug\net8.0\StoreHub_Data.dll
+E:\Marwan\My projects\C#\StoreHub\StoreHub_Data\obj\Debug\net8.0\refint\StoreHub_Data.dll
+E:\Marwan\My projects\C#\StoreHub\StoreHub_Data\obj\Debug\net8.0\StoreHub_Data.pdb
+E:\Marwan\My projects\C#\StoreHub\StoreHub_Data\obj\Debug\net8.0\ref\StoreHub_Data.dll
+E:\Marwan\My projects\C#\StoreHub\StoreHub_Data\bin\Debug\net8.0\StoreHub_Data.runtimeconfig.json
+E:\Marwan\My projects\C#\StoreHub\StoreHub_Data\obj\Debug\net8.0\StoreHub_Data.csproj.AssemblyReference.cache
+E:\Marwan\My projects\C#\StoreHub\StoreHub_Data\obj\Debug\net8.0\StoreHub_Data.genruntimeconfig.cache
+E:\Marwan\My projects\C#\StoreHub\StoreHub_Data\bin\Debug\net8.0\StoreHub_DTOs.dll
+E:\Marwan\My projects\C#\StoreHub\StoreHub_Data\bin\Debug\net8.0\StoreHub_DTOs.pdb
+E:\Marwan\My projects\C#\StoreHub\StoreHub_Data\obj\Debug\net8.0\StoreHub.65D510AC.Up2Date
