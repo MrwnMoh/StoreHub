@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="../SharedLayer/StoreHub_DTOs/StoreHub_DTOs.csproj" Id="abec3624-d577-4ff1-884a-a1defeaa0448" />
+  <Project Path="../../SharedLayer/StoreHub_DTOs/StoreHub_DTOs.csproj" />
   <Project Path="../StoreHub_Business/StoreHub_Business.csproj" />
   <Project Path="../StoreHub_Data/StoreHub_Data.csproj" />
   <Project Path="StoreHub_Api.csproj" />

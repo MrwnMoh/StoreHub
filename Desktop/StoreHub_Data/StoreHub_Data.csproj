@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SharedLayer\StoreHub_DTOs\StoreHub_DTOs.csproj" />
+    <ProjectReference Include="..\..\SharedLayer\StoreHub_DTOs\StoreHub_DTOs.csproj" />
   </ItemGroup>
 
 </Project>

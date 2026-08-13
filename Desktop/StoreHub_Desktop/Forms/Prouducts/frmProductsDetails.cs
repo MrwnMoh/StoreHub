@@ -1,6 +1,9 @@
 ﻿using Shop_Desktop_Business;
+using Shop_Desktop_Business.Cart;
 using Shop_Desktop_Business.Other;
 using StoreHub_Desktop.Classes;
+using StoreHub_Desktop.Forms.Cart;
+using StoreHub_Desktop.Forms.Global;
 using StoreHub_Desktop.Properties;
 using StoreHub_Desktop.User_Controls.Products.Reviews;
 using StoreHub_DTOs.Products;
@@ -22,7 +25,12 @@ namespace StoreHub_Desktop.Forms.Prouducts
         int productID;
         public Action OnPostCompleted;
 
-        public Action <int, decimal> OnReviewsRefresh;
+        public Action OnItemAddedToCart;
+
+        public Action<int> OnViewCartOpnnedThenItemDeleted;
+
+
+        public Action<int, decimal> OnReviewsRefresh;
 
 
         public frmProductsDetails()
@@ -49,14 +57,15 @@ namespace StoreHub_Desktop.Forms.Prouducts
 
             lblRatingAvg.Text = ratingAvg.ToString("0.0");
 
-            if(product.Images!= null)
+
+
+            if (product.Images != null)
             {
-                foreach(var img in product.Images)
+                foreach (var img in product.Images)
                 {
-                    if(File.Exists(img))
+                    if (File.Exists(img))
                     {
-                        pbProductImage.ImageLocation = img;
-                        return;
+                        clsUtilty.SetProductImage(ref pbProductImage, img);
                     }
                 }
             }
@@ -113,7 +122,7 @@ namespace StoreHub_Desktop.Forms.Prouducts
             uctrlWriteaReview1.Clear();
             var reviews = await LoadReviews();
             await SetReviews(reviews);
-            OnReviewsRefresh?.Invoke(reviews.Count,reviews.Average(r => r.Rating));
+            OnReviewsRefresh?.Invoke(reviews.Count, reviews.Average(r => r.Rating));
         }
 
         async Task<List<DTO_Reviews>> LoadReviews()
@@ -123,7 +132,7 @@ namespace StoreHub_Desktop.Forms.Prouducts
 
                 return await clsProducts.GetProductsReviewsById(productID);
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 clsUtilty.PrintWarn(ex.Message);
             }
@@ -140,7 +149,7 @@ namespace StoreHub_Desktop.Forms.Prouducts
 
                 uctrlUserReview uc = new uctrlUserReview();
                 uc.OnEditReview += uctrlWriteaReview1.SetEditReviewData;
-                uc.OnDeleteReview += async () => {await RefreshReviews(); };
+                uc.OnDeleteReview += async () => { await RefreshReviews(); };
                 ;
                 uc.SetData(review);
                 flpReviews.Controls.Add(uc);
@@ -153,5 +162,47 @@ namespace StoreHub_Desktop.Forms.Prouducts
         {
             Hide();
         }
+
+        private async void btnAddToCart_Click(object sender, EventArgs e)
+        {
+            btnAddToCart.Enabled = false;
+            await AddItem();
+            btnAddToCart.Enabled = true;
+        }
+
+
+        async Task AddItem()
+        {
+            try
+            {
+                await clsCart.AddItemToCart(productID);
+                OnItemAddedToCart?.Invoke();
+                await OpenProdectAddedForm();
+            }
+            catch
+            {
+                clsUtilty.PrintWarn("Error while adding the product");
+            }
+        }
+
+        async Task OpenProdectAddedForm()
+        {
+
+            frmProductAddedToCart frm = new frmProductAddedToCart();
+            frm.OnClickViewCart += () => { OpenCart(); };
+            await frm.SetData(productID);
+            frm.ShowDialog();
+        }
+
+        void OpenCart()
+        {
+            Hide();
+            frmCart frm = new frmCart();
+            frm.OnCartCountChanges += (c) => { OnViewCartOpnnedThenItemDeleted?.Invoke(c); } ;
+            frm.ShowDialog();
+            Close();
+        }
+
+
     }
 }

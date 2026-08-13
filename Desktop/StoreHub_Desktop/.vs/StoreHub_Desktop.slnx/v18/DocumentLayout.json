@@ -3,31 +3,52 @@
   "WorkspaceRootPath": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|e:\\marwan\\my projects\\c#\\storehub\\desktop\\storehub_desktop\\user controls\\products\\uctrlproductincart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|solutionrelative:user controls\\products\\uctrlproductincart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|e:\\marwan\\my projects\\c#\\storehub\\desktop\\storehub_desktop\\forms\\frmmainapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|solutionrelative:forms\\frmmainapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|e:\\marwan\\my projects\\c#\\storehub\\desktop\\storehub_desktop\\forms\\frmmainapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|solutionrelative:forms\\frmmainapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|e:\\marwan\\my projects\\c#\\storehub\\desktop\\storehub_desktop\\user controls\\products\\homeproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|solutionrelative:user controls\\products\\homeproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|e:\\marwan\\my projects\\c#\\storehub\\desktop\\storehub_desktop\\user controls\\products\\homeproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|solutionrelative:user controls\\products\\homeproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|e:\\marwan\\my projects\\c#\\storehub\\desktop\\storehub_desktop\\user controls\\products\\uctrlproductsamary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|solutionrelative:user controls\\products\\uctrlproductsamary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|e:\\marwan\\my projects\\c#\\storehub\\desktop\\storehub_desktop\\user controls\\products\\uctrlproductsamary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|solutionrelative:user controls\\products\\uctrlproductsamary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|e:\\marwan\\my projects\\c#\\storehub\\desktop\\storehub_desktop\\forms\\prouducts\\frmproductsdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|solutionrelative:forms\\prouducts\\frmproductsdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|e:\\marwan\\my projects\\c#\\storehub\\desktop\\storehub_desktop\\user controls\\products\\reviews\\uctrluserreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|solutionrelative:user controls\\products\\reviews\\uctrluserreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|e:\\marwan\\my projects\\c#\\storehub\\desktop\\storehub_desktop\\user controls\\products\\reviews\\uctrluserreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|solutionrelative:user controls\\products\\reviews\\uctrluserreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|e:\\marwan\\my projects\\c#\\storehub\\desktop\\storehub_desktop\\forms\\prouducts\\frmproductsdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|solutionrelative:forms\\prouducts\\frmproductsdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|e:\\marwan\\my projects\\c#\\storehub\\desktop\\storehub_desktop\\forms\\global\\frmdelete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|solutionrelative:forms\\global\\frmdelete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|e:\\marwan\\my projects\\c#\\storehub\\desktop\\storehub_desktop\\forms\\cart\\frmproductaddedtocart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|solutionrelative:forms\\cart\\frmproductaddedtocart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|e:\\marwan\\my projects\\c#\\storehub\\desktop\\storehub_desktop\\forms\\global\\frmdelete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|solutionrelative:forms\\global\\frmdelete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|e:\\marwan\\my projects\\c#\\storehub\\desktop\\storehub_desktop\\forms\\cart\\frmproductaddedtocart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|solutionrelative:forms\\cart\\frmproductaddedtocart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD502C35-B273-F366-A2E8-1B478DAD75A4}|..\\Shop_Desktop_Business\\Shop_Desktop_Business.csproj|e:\\marwan\\my projects\\c#\\storehub\\desktop\\shop_desktop_business\\clsproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|e:\\marwan\\my projects\\c#\\storehub\\desktop\\storehub_desktop\\user controls\\products\\uctrlproductincart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|solutionrelative:user controls\\products\\uctrlproductincart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -45,90 +66,152 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmProductsDetails.cs",
-              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\Forms\\Prouducts\\frmProductsDetails.cs",
-              "RelativeDocumentMoniker": "Forms\\Prouducts\\frmProductsDetails.cs",
-              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\Forms\\Prouducts\\frmProductsDetails.cs",
-              "RelativeToolTip": "Forms\\Prouducts\\frmProductsDetails.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAwwI4AAAA3AAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "HomeProducts.cs",
+              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\User Controls\\Products\\HomeProducts.cs",
+              "RelativeDocumentMoniker": "User Controls\\Products\\HomeProducts.cs",
+              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\User Controls\\Products\\HomeProducts.cs",
+              "RelativeToolTip": "User Controls\\Products\\HomeProducts.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAwwC8AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-12T15:14:04.764Z",
+              "WhenOpened": "2026-08-13T19:17:49.863Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "frmDelete.cs",
-              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\Forms\\Global\\frmDelete.cs",
-              "RelativeDocumentMoniker": "Forms\\Global\\frmDelete.cs",
-              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\Forms\\Global\\frmDelete.cs",
-              "RelativeToolTip": "Forms\\Global\\frmDelete.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Title": "HomeProducts.cs [Design]",
+              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\User Controls\\Products\\HomeProducts.cs",
+              "RelativeDocumentMoniker": "User Controls\\Products\\HomeProducts.cs",
+              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\User Controls\\Products\\HomeProducts.cs [Design]",
+              "RelativeToolTip": "User Controls\\Products\\HomeProducts.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-12T15:13:47.566Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmDelete.cs [Design]",
-              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\Forms\\Global\\frmDelete.cs",
-              "RelativeDocumentMoniker": "Forms\\Global\\frmDelete.cs",
-              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\Forms\\Global\\frmDelete.cs [Design]",
-              "RelativeToolTip": "Forms\\Global\\frmDelete.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-12T15:13:45.889Z",
+              "WhenOpened": "2026-08-13T19:17:48.28Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "clsProducts.cs",
-              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\Shop_Desktop_Business\\clsProducts.cs",
-              "RelativeDocumentMoniker": "..\\Shop_Desktop_Business\\clsProducts.cs",
-              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\Shop_Desktop_Business\\clsProducts.cs",
-              "RelativeToolTip": "..\\Shop_Desktop_Business\\clsProducts.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAewFoAAAANAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "uctrlProductSamary.cs",
+              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\User Controls\\Products\\uctrlProductSamary.cs",
+              "RelativeDocumentMoniker": "User Controls\\Products\\uctrlProductSamary.cs",
+              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\User Controls\\Products\\uctrlProductSamary.cs",
+              "RelativeToolTip": "User Controls\\Products\\uctrlProductSamary.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAuwGYAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-12T15:06:50.714Z",
+              "WhenOpened": "2026-08-13T19:16:41.52Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
+              "Title": "uctrlProductSamary.cs [Design]",
+              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\User Controls\\Products\\uctrlProductSamary.cs",
+              "RelativeDocumentMoniker": "User Controls\\Products\\uctrlProductSamary.cs",
+              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\User Controls\\Products\\uctrlProductSamary.cs [Design]",
+              "RelativeToolTip": "User Controls\\Products\\uctrlProductSamary.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T19:16:40.162Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "uctrlProductInCart.cs",
+              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\User Controls\\Products\\uctrlProductInCart.cs",
+              "RelativeDocumentMoniker": "User Controls\\Products\\uctrlProductInCart.cs",
+              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\User Controls\\Products\\uctrlProductInCart.cs",
+              "RelativeToolTip": "User Controls\\Products\\uctrlProductInCart.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAMwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T19:11:25.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "uctrlProductInCart.cs [Design]",
+              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\User Controls\\Products\\uctrlProductInCart.cs",
+              "RelativeDocumentMoniker": "User Controls\\Products\\uctrlProductInCart.cs",
+              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\User Controls\\Products\\uctrlProductInCart.cs [Design]",
+              "RelativeToolTip": "User Controls\\Products\\uctrlProductInCart.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T19:11:24.274Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmProductAddedToCart.cs",
+              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\Forms\\Cart\\frmProductAddedToCart.cs",
+              "RelativeDocumentMoniker": "Forms\\Cart\\frmProductAddedToCart.cs",
+              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\Forms\\Cart\\frmProductAddedToCart.cs",
+              "RelativeToolTip": "Forms\\Cart\\frmProductAddedToCart.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAtwDIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T18:31:08.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmProductAddedToCart.cs [Design]",
+              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\Forms\\Cart\\frmProductAddedToCart.cs",
+              "RelativeDocumentMoniker": "Forms\\Cart\\frmProductAddedToCart.cs",
+              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\Forms\\Cart\\frmProductAddedToCart.cs [Design]",
+              "RelativeToolTip": "Forms\\Cart\\frmProductAddedToCart.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T18:31:07.439Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmProductsDetails.cs",
+              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\Forms\\Prouducts\\frmProductsDetails.cs",
+              "RelativeDocumentMoniker": "Forms\\Prouducts\\frmProductsDetails.cs",
+              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\Forms\\Prouducts\\frmProductsDetails.cs",
+              "RelativeToolTip": "Forms\\Prouducts\\frmProductsDetails.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-13T18:29:25.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "frmProductsDetails.cs [Design]",
               "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\Forms\\Prouducts\\frmProductsDetails.cs",
               "RelativeDocumentMoniker": "Forms\\Prouducts\\frmProductsDetails.cs",
               "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\Forms\\Prouducts\\frmProductsDetails.cs [Design]",
               "RelativeToolTip": "Forms\\Prouducts\\frmProductsDetails.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-12T14:04:44.196Z",
+              "WhenOpened": "2026-08-13T18:29:22.949Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "uctrlUserReview.cs",
-              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\User Controls\\Products\\Reviews\\uctrlUserReview.cs",
-              "RelativeDocumentMoniker": "User Controls\\Products\\Reviews\\uctrlUserReview.cs",
-              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\User Controls\\Products\\Reviews\\uctrlUserReview.cs",
-              "RelativeToolTip": "User Controls\\Products\\Reviews\\uctrlUserReview.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowDcAAAA0AAAAAAAAAA==",
+              "Title": "frmMainApp.cs",
+              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\Forms\\frmMainApp.cs",
+              "RelativeDocumentMoniker": "Forms\\frmMainApp.cs",
+              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\Forms\\frmMainApp.cs",
+              "RelativeToolTip": "Forms\\frmMainApp.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAMwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-12T12:52:38.333Z",
+              "WhenOpened": "2026-08-13T17:52:17.033Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "uctrlUserReview.cs [Design]",
-              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\User Controls\\Products\\Reviews\\uctrlUserReview.cs",
-              "RelativeDocumentMoniker": "User Controls\\Products\\Reviews\\uctrlUserReview.cs",
-              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\User Controls\\Products\\Reviews\\uctrlUserReview.cs [Design]",
-              "RelativeToolTip": "User Controls\\Products\\Reviews\\uctrlUserReview.cs [Design]",
+              "Title": "frmMainApp.cs [Design]",
+              "DocumentMoniker": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\Forms\\frmMainApp.cs",
+              "RelativeDocumentMoniker": "Forms\\frmMainApp.cs",
+              "ToolTip": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\Forms\\frmMainApp.cs [Design]",
+              "RelativeToolTip": "Forms\\frmMainApp.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-12T12:43:25.924Z",
+              "WhenOpened": "2026-08-13T17:47:34Z",
               "EditorCaption": " [Design]"
             }
           ]

@@ -5131,8 +5131,8 @@
     },
     "StoreHub_DTOs/1.0.0": {
       "type": "project",
-      "path": "../SharedLayer/StoreHub_DTOs/StoreHub_DTOs.csproj",
-      "msbuildProject": "../SharedLayer/StoreHub_DTOs/StoreHub_DTOs.csproj"
+      "path": "../../SharedLayer/StoreHub_DTOs/StoreHub_DTOs.csproj",
+      "msbuildProject": "../../SharedLayer/StoreHub_DTOs/StoreHub_DTOs.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5156,11 +5156,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Marwan\\My projects\\C#\\StoreHub\\StoreHub_Data\\StoreHub_Data.csproj",
+      "projectUniqueName": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Data\\StoreHub_Data.csproj",
       "projectName": "StoreHub_Data",
-      "projectPath": "E:\\Marwan\\My projects\\C#\\StoreHub\\StoreHub_Data\\StoreHub_Data.csproj",
+      "projectPath": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Data\\StoreHub_Data.csproj",
       "packagesPath": "C:\\Users\\moham\\.nuget\\packages\\",
-      "outputPath": "E:\\Marwan\\My projects\\C#\\StoreHub\\StoreHub_Data\\obj\\",
+      "outputPath": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5198,7 +5198,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "10.0.300"
+      "SdkAnalysisLevel": "10.0.400"
     },
     "frameworks": {
       "net8.0": {
@@ -5258,15 +5258,15 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.29, 8.0.29]"
+            "version": "[8.0.30, 8.0.30]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.29, 8.0.29]"
+            "version": "[8.0.30, 8.0.30]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.29, 8.0.29]"
+            "version": "[8.0.30, 8.0.30]"
           }
         ],
         "frameworkReferences": {
@@ -5274,7 +5274,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

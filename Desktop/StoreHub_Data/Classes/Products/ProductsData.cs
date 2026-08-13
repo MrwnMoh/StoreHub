@@ -14,7 +14,7 @@ namespace StoreHub_Data.Classes.Products
     {
 
 
-        public static async Task<List<DTO_ProductsSamary>> GetHomeProducts()
+        public static async Task<List<DTO_ProductsSummary>> GetHomeProducts()
         {
 
             try
@@ -25,7 +25,7 @@ namespace StoreHub_Data.Classes.Products
                 var products = await context.Products.AsNoTracking()
             .OrderBy(p => Guid.NewGuid())
             .Take(12)
-            .Select(p => new DTO_ProductsSamary
+            .Select(p => new DTO_ProductsSummary
             {
                 ProductID = p.ProductId,
                 ProductName = p.Name,
@@ -55,6 +55,48 @@ namespace StoreHub_Data.Classes.Products
 
             
         }
+
+        public static async Task<DTO_ProductsSummary> GetProductSummaryById(int Id)
+        {
+
+            try
+            {
+                using var context = Settings.CreateContext();
+
+
+                var product = await context.Products.AsNoTracking()
+                    .Where(p => p.ProductId == Id)
+            .Select(p => new DTO_ProductsSummary
+            {
+                ProductID = p.ProductId,
+                ProductName = p.Name,
+                Price = p.Price,
+
+                TotalRating = p.Reviews.Count,
+
+                RatingAverage = p.Reviews.Average(r => (decimal?)r.Rate) ?? 0,
+
+                CategoryName = p.Category.Name,
+
+                ImagePath = p.ProductImages
+                    .Select(i => i.ImagePath)
+                    .FirstOrDefault()
+            })
+            .FirstOrDefaultAsync();
+
+
+                return product;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+
+
+        }
+
 
         public static async Task<DTO_ProductsDetails> GetProductDetails(int productsId)
         {

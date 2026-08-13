@@ -16,6 +16,10 @@ namespace StoreHub_Desktop.User_Controls.Products
 {
     public partial class uctrlProductSamary : UserControl
     {
+        public Action OnItemAddedToCart;
+
+        public Action<int> OnCartItemChanges;
+
 
         int id = 0;
         public uctrlProductSamary()
@@ -36,7 +40,15 @@ namespace StoreHub_Desktop.User_Controls.Products
             }
         }
 
-        public void SetData(DTO_ProductsSamary product)
+        public async Task SetDataById(int id)
+        {
+            DTO_ProductsSummary product = await clsProducts.GetProductSummaryById(id);
+
+            SetData(product);
+
+        }
+
+        public void SetData(DTO_ProductsSummary product)
         {
             lblProductName.Text = product.ProductName;
             lblProductCategory.Text = product.CategoryName;
@@ -87,7 +99,8 @@ namespace StoreHub_Desktop.User_Controls.Products
                     frmProductsDetails frm = new frmProductsDetails();
 
                    frm.OnReviewsRefresh += SetRatingData;
-
+                   frm.OnItemAddedToCart += () => OnItemAddedToCart?.Invoke();
+                   frm.OnViewCartOpnnedThenItemDeleted += (c) => { OnCartItemChanges?.Invoke(c); };
                    await frm.SetData(details);
 
                     frm.ShowDialog();

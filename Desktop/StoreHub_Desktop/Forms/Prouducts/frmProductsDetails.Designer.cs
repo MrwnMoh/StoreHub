@@ -45,7 +45,7 @@
             label1 = new Label();
             lblReviews = new Label();
             flpReviews = new FlowLayoutPanel();
-            guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
+            btnAddToCart = new Guna.UI2.WinForms.Guna2GradientButton();
             guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             lblDescription = new Label();
@@ -85,7 +85,7 @@
             guna2Panel1.Controls.Add(label1);
             guna2Panel1.Controls.Add(lblReviews);
             guna2Panel1.Controls.Add(flpReviews);
-            guna2Panel1.Controls.Add(guna2GradientButton2);
+            guna2Panel1.Controls.Add(btnAddToCart);
             guna2Panel1.Controls.Add(guna2GradientButton1);
             guna2Panel1.Controls.Add(guna2Separator2);
             guna2Panel1.Controls.Add(lblDescription);
@@ -181,28 +181,29 @@
             flpReviews.Size = new Size(878, 186);
             flpReviews.TabIndex = 34;
             // 
-            // guna2GradientButton2
+            // btnAddToCart
             // 
-            guna2GradientButton2.Animated = true;
-            guna2GradientButton2.BorderColor = Color.FromArgb(239, 240, 243);
-            guna2GradientButton2.BorderRadius = 10;
-            guna2GradientButton2.BorderThickness = 2;
-            guna2GradientButton2.CustomizableEdges = customizableEdges1;
-            guna2GradientButton2.DisabledState.BorderColor = Color.DarkGray;
-            guna2GradientButton2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2GradientButton2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2GradientButton2.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
-            guna2GradientButton2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2GradientButton2.FillColor = Color.White;
-            guna2GradientButton2.FillColor2 = Color.White;
-            guna2GradientButton2.Font = new Font("Nunito", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2GradientButton2.ForeColor = Color.Black;
-            guna2GradientButton2.Location = new Point(665, 341);
-            guna2GradientButton2.Name = "guna2GradientButton2";
-            guna2GradientButton2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2GradientButton2.Size = new Size(226, 51);
-            guna2GradientButton2.TabIndex = 33;
-            guna2GradientButton2.Text = "Add to cart";
+            btnAddToCart.Animated = true;
+            btnAddToCart.BorderColor = Color.FromArgb(239, 240, 243);
+            btnAddToCart.BorderRadius = 10;
+            btnAddToCart.BorderThickness = 2;
+            btnAddToCart.CustomizableEdges = customizableEdges1;
+            btnAddToCart.DisabledState.BorderColor = Color.DarkGray;
+            btnAddToCart.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAddToCart.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAddToCart.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            btnAddToCart.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAddToCart.FillColor = Color.White;
+            btnAddToCart.FillColor2 = Color.White;
+            btnAddToCart.Font = new Font("Nunito", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAddToCart.ForeColor = Color.Black;
+            btnAddToCart.Location = new Point(665, 341);
+            btnAddToCart.Name = "btnAddToCart";
+            btnAddToCart.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnAddToCart.Size = new Size(226, 51);
+            btnAddToCart.TabIndex = 33;
+            btnAddToCart.Text = "Add to cart";
+            btnAddToCart.Click += btnAddToCart_Click;
             // 
             // guna2GradientButton1
             // 
@@ -376,7 +377,7 @@
         private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar1;
         private Label lblProductCategory;
         private Label lblProductName;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
+        private Guna.UI2.WinForms.Guna2GradientButton btnAddToCart;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
         private Label lblReviews;

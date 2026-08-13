@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StoreHub_DTOs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e3321343320daffaed0b62e264c39e420116218")]
 [assembly: System.Reflection.AssemblyProductAttribute("StoreHub_DTOs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StoreHub_DTOs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

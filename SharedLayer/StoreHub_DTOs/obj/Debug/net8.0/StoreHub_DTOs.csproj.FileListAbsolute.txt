@@ -6,6 +6,7 @@ E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\Sto
 E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.AssemblyInfoInputs.cache
 E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.AssemblyInfo.cs
 E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.csproj.CoreCompileInputs.cache
+E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.sourcelink.json
 E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.dll
 E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\refint\StoreHub_DTOs.dll
 E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.pdb

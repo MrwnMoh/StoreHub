@@ -6,6 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using CredentialManagement;
+using StoreHub_Desktop.Properties;
 namespace StoreHub_Desktop.Classes
 {
     public class clsUtilty
@@ -21,7 +22,7 @@ namespace StoreHub_Desktop.Classes
             MessageBox.Show(msg, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public static void SetUserImage(Guna2CirclePictureBox pictureBox,string imagePath,bool isMale)
+        public static void SetUserImage(ref Guna2CirclePictureBox pictureBox,string imagePath,bool isMale)
         {
             if(File.Exists(imagePath))
             {
@@ -37,6 +38,18 @@ namespace StoreHub_Desktop.Classes
                 {
 
                 }
+            }
+        }
+
+        public static void SetProductImage(ref Guna2PictureBox pictureBox, string imagePath)
+        {
+            if (File.Exists(imagePath))
+            {
+                pictureBox.ImageLocation = imagePath;
+            }
+            else
+            {
+                pictureBox.Image = Resources.ChatGPT_Image_Aug_10__2026__09_58_47_PM;
             }
         }
 

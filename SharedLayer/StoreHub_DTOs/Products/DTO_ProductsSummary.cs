@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StoreHub_DTOs.Products
 {
-    public class DTO_ProductsSamary
+    public class DTO_ProductsSummary
     {
 
 

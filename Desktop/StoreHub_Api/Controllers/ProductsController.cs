@@ -27,7 +27,7 @@ namespace StoreHub_Api.Controllers
         [HttpGet("GetHomeProducts")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<List<DTO_ProductsSamary>>> GetHomeProducts()
+        public async Task<ActionResult<List<DTO_ProductsSummary>>> GetHomeProducts()
         {
 
             var products = await clsProducts.GetHomeProducts();
@@ -66,6 +66,27 @@ namespace StoreHub_Api.Controllers
 
             return Ok(product);
         }
+
+
+        [HttpGet("summary/{Id}", Name = "GetProductSummaryById")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<DTO_ProductsSummary>> GetProductSummaryById(int Id)
+        {
+            if (Id <= 0)
+                return BadRequest("Id not accepted");
+
+            var product = await clsProducts.GetProductSummaryById(Id);
+
+            if (product == null)
+                return NotFound("Product not found");
+
+            return Ok(product);
+        }
+
+
+
 
         [HttpGet("Reviews{Id}", Name = "GetProductsReviewsById")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -121,7 +142,7 @@ namespace StoreHub_Api.Controllers
 
 
 
-        [HttpPost("EditReview")]
+        [HttpPatch("EditReview")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]

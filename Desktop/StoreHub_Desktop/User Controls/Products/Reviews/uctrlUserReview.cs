@@ -47,7 +47,7 @@ namespace StoreHub_Desktop.User_Controls.Products.Reviews
             guna2RatingStar1.Value = (float)review.Rating;
 
 
-            clsUtilty.SetUserImage(guna2CirclePictureBox1, review.UserImagePath, review.IsUserMale);
+            clsUtilty.SetUserImage(ref guna2CirclePictureBox1, review.UserImagePath, review.IsUserMale);
 
         }
 

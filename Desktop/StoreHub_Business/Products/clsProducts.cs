@@ -17,7 +17,7 @@ namespace StoreHub_Business.Products
 
 
 
-        public static async Task<List<DTO_ProductsSamary>> GetHomeProducts()
+        public static async Task<List<DTO_ProductsSummary>> GetHomeProducts()
         {
             try
             {
@@ -44,6 +44,23 @@ namespace StoreHub_Business.Products
                 throw new Exception(ex.Message);
             }
         }
+
+
+        public static async Task<DTO_ProductsSummary> GetProductSummaryById(int Id)
+        {
+            try
+            {
+                var product = await ProductsData.GetProductSummaryById(Id);
+
+                return product;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
 
         public static async Task<List<DTO_Reviews>> GetProductsReviewsById(int Id)
         {

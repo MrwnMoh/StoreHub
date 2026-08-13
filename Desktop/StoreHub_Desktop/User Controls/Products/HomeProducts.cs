@@ -14,6 +14,10 @@ namespace StoreHub_Desktop.User_Controls.Products
 {
     public partial class HomeProducts : UserControl
     {
+
+        public Action OnItemAddedToCart;
+        public Action<int> OnCartItemChanges;
+
         public HomeProducts()
         {
             InitializeComponent();
@@ -37,6 +41,8 @@ namespace StoreHub_Desktop.User_Controls.Products
                     {
                         uctrlProductSamary uc = new uctrlProductSamary();
 
+                        uc.OnItemAddedToCart += () => OnItemAddedToCart?.Invoke();
+                        uc.OnCartItemChanges += (c) => OnCartItemChanges?.Invoke(c);
                         uc.Margin = new Padding(10, 8, 10, 0);
 
                         uc.SetData(product);

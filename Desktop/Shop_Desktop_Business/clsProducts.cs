@@ -17,13 +17,22 @@ namespace Shop_Desktop_Business
 
 
 
-        public static async Task<List<DTO_ProductsSamary>> LoadHomeProducts()
+        public static async Task<List<DTO_ProductsSummary>> LoadHomeProducts()
         {
 
-            var products = await clsDefultes.Client.GetFromJsonAsync<List<DTO_ProductsSamary>>("Products/GetHomeProducts");
+            var products = await clsDefultes.Client.GetFromJsonAsync<List<DTO_ProductsSummary>>("Products/GetHomeProducts");
 
             return products;
         }
+
+        public static async Task<DTO_ProductsSummary> GetProductSummaryById(int Id)
+        {
+
+            var product = await clsDefultes.Client.GetFromJsonAsync<DTO_ProductsSummary>($"Products/summary/{Id}");
+
+            return product;
+        }
+
 
         public static async Task<DTO_ProductsDetails> GetProductsDetailsById(int id)
         {
@@ -96,7 +105,7 @@ namespace Shop_Desktop_Business
         {
             try
             {
-                var response = await clsDefultes.Client.PostAsJsonAsync("Products/EditReview", request);
+                var response = await clsDefultes.Client.PatchAsJsonAsync("Products/EditReview", request);
                 response.EnsureSuccessStatusCode();
             }
             catch
