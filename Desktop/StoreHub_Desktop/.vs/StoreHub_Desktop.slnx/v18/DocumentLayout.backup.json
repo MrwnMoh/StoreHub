@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|solutionrelative:user controls\\menu\\myprofile\\uctrluserdetailsrowswithedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|c:\\users\\moham\\marwan_mahmoud\\marwan\\programing\\projects\\c#\\clone\\desktop\\storehub_desktop\\user controls\\menu\\myprofile\\uctrluserdetailsrowswithedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|C:\\Users\\moham\\Marwan_Mahmoud\\Marwan\\Programing\\Projects\\C#\\Clone\\Desktop\\StoreHub_Desktop\\user controls\\menu\\myprofile\\uctrluserdetailsrowswithedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|solutionrelative:user controls\\menu\\myprofile\\uctrluserdetailsrowswithedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -19,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|solutionrelative:user controls\\admin\\uctrl_adminmaindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|c:\\users\\moham\\marwan_mahmoud\\marwan\\programing\\projects\\c#\\clone\\desktop\\storehub_desktop\\user controls\\admin\\stores\\uctrlstores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|C:\\Users\\moham\\Marwan_Mahmoud\\Marwan\\Programing\\Projects\\C#\\Clone\\Desktop\\StoreHub_Desktop\\user controls\\admin\\stores\\uctrlstores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7D914372-E578-889D-E9FB-E76BCAB9DAD5}|StoreHub_Desktop.csproj|solutionrelative:user controls\\admin\\stores\\uctrlstores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -42,9 +42,9 @@
               "Title": "uctrlUserDetailsRowsWithEdit.cs",
               "DocumentMoniker": "C:\\Users\\moham\\Marwan_Mahmoud\\Marwan\\Programing\\Projects\\C#\\Clone\\Desktop\\StoreHub_Desktop\\User Controls\\Menu\\MyProfile\\uctrlUserDetailsRowsWithEdit.cs",
               "RelativeDocumentMoniker": "User Controls\\Menu\\MyProfile\\uctrlUserDetailsRowsWithEdit.cs",
-              "ToolTip": "C:\\Users\\moham\\Marwan_Mahmoud\\Marwan\\Programing\\Projects\\C#\\Clone\\Desktop\\StoreHub_Desktop\\User Controls\\Menu\\MyProfile\\uctrlUserDetailsRowsWithEdit.cs*",
-              "RelativeToolTip": "User Controls\\Menu\\MyProfile\\uctrlUserDetailsRowsWithEdit.cs*",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAqwKoAAAAUAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\moham\\Marwan_Mahmoud\\Marwan\\Programing\\Projects\\C#\\Clone\\Desktop\\StoreHub_Desktop\\User Controls\\Menu\\MyProfile\\uctrlUserDetailsRowsWithEdit.cs",
+              "RelativeToolTip": "User Controls\\Menu\\MyProfile\\uctrlUserDetailsRowsWithEdit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-07T16:24:35.026Z",
               "EditorCaption": ""
@@ -55,11 +55,10 @@
               "Title": "uctrlUserDetailsRowsWithEdit.cs [Design]",
               "DocumentMoniker": "C:\\Users\\moham\\Marwan_Mahmoud\\Marwan\\Programing\\Projects\\C#\\Clone\\Desktop\\StoreHub_Desktop\\User Controls\\Menu\\MyProfile\\uctrlUserDetailsRowsWithEdit.cs",
               "RelativeDocumentMoniker": "User Controls\\Menu\\MyProfile\\uctrlUserDetailsRowsWithEdit.cs",
-              "ToolTip": "C:\\Users\\moham\\Marwan_Mahmoud\\Marwan\\Programing\\Projects\\C#\\Clone\\Desktop\\StoreHub_Desktop\\User Controls\\Menu\\MyProfile\\uctrlUserDetailsRowsWithEdit.cs [Design]*",
-              "RelativeToolTip": "User Controls\\Menu\\MyProfile\\uctrlUserDetailsRowsWithEdit.cs [Design]*",
+              "ToolTip": "C:\\Users\\moham\\Marwan_Mahmoud\\Marwan\\Programing\\Projects\\C#\\Clone\\Desktop\\StoreHub_Desktop\\User Controls\\Menu\\MyProfile\\uctrlUserDetailsRowsWithEdit.cs [Design]",
+              "RelativeToolTip": "User Controls\\Menu\\MyProfile\\uctrlUserDetailsRowsWithEdit.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-07T16:24:33.445Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-09-07T16:24:33.445Z"
             },
             {
               "$type": "Document",
@@ -70,8 +69,7 @@
               "ToolTip": "C:\\Users\\moham\\Marwan_Mahmoud\\Marwan\\Programing\\Projects\\C#\\Clone\\Desktop\\StoreHub_Desktop\\User Controls\\Admin\\Stores\\uctrlStores.cs [Design]",
               "RelativeToolTip": "User Controls\\Admin\\Stores\\uctrlStores.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-07T11:40:27.814Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-09-07T11:40:27.814Z"
             },
             {
               "$type": "Document",
@@ -82,8 +80,7 @@
               "ToolTip": "C:\\Users\\moham\\Marwan_Mahmoud\\Marwan\\Programing\\Projects\\C#\\Clone\\Desktop\\StoreHub_Desktop\\User Controls\\Admin\\uctrl_AdminMainDashboard.cs [Design]",
               "RelativeToolTip": "User Controls\\Admin\\uctrl_AdminMainDashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-05T16:09:06.16Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-09-05T16:09:06.16Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "ToolTip": "C:\\Users\\moham\\Marwan_Mahmoud\\Marwan\\Programing\\Projects\\C#\\Clone\\Desktop\\StoreHub_Desktop\\Forms\\Global\\frmMainApp.cs [Design]",
               "RelativeToolTip": "Forms\\Global\\frmMainApp.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-31T19:20:16.59Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-08-31T19:20:16.59Z"
             }
           ]
         }
