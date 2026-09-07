@@ -56,6 +56,7 @@
             // pbImage
             // 
             pbImage.BorderRadius = 15;
+            pbImage.Cursor = Cursors.Hand;
             pbImage.CustomizableEdges = customizableEdges1;
             pbImage.Dock = DockStyle.Fill;
             pbImage.Image = Properties.Resources.BannarFirnotion;
@@ -67,6 +68,7 @@
             pbImage.SizeMode = PictureBoxSizeMode.StretchImage;
             pbImage.TabIndex = 2;
             pbImage.TabStop = false;
+            pbImage.Click += pbImage_Click;
             // 
             // timer1
             // 

@@ -19,6 +19,9 @@ namespace StoreHub_Desktop.Forms.Cart
 
         public Action<int> OnCartCountChanges;
 
+        public Action OnCheckout;
+
+
         decimal _toalAmount;
         int _itemsCount;
         public frmCart()
@@ -48,13 +51,17 @@ namespace StoreHub_Desktop.Forms.Cart
 
                 var cart = await GetCart();
 
-                if(cart != null)
+                if (cart != null)
                 {
+
                     _toalAmount = cart.TotalPrice;
 
                     _itemsCount = cart.CartItems.Count;
                     lblCartItemsCount.Text = $"({_itemsCount})";
                     lblTotalPrice.Text = _toalAmount.ToString("N2");
+
+                    if(cart.CartItems.Count > 0)
+                        btnCheckout.Enabled = true;
 
 
                     foreach (var item in cart.CartItems)
@@ -105,7 +112,7 @@ namespace StoreHub_Desktop.Forms.Cart
         }
 
 
-        void DeleteItem(Control item,decimal amount)
+        void DeleteItem(Control item, decimal amount)
         {
             _toalAmount -= amount;
             _itemsCount--;
@@ -116,6 +123,11 @@ namespace StoreHub_Desktop.Forms.Cart
 
         }
 
-
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            Hide();
+            OnCheckout?.Invoke();
+            Close();
+        }
     }
 }

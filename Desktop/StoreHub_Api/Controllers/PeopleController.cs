@@ -1,219 +1,167 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using StoreHub_Api.Classes;
+using StoreHub_Business.People;
 using StoreHub_Data.Data;
+using StoreHub_Data.Entities;
 using StoreHub_DTOs;
 using StoreHub_DTOs.People;
+using System.Security.Claims;
 
 namespace StoreHub_Api.Controllers
 {
 
     
     [Authorize]
-    [Route("api/Peaople")]
+
+    [EnableRateLimiting("Cart")]
+
+
+    [Route("api/People")]
     [ApiController]
     public class PeopleController : ControllerBase
     {
 
-        //[HttpGet("GetPeople")]
-        //public ActionResult<IEnumerable< DTO_People>> GetPeople()
-        //{
-
-        //    var options = new DbContextOptionsBuilder<AppDbContext>()
-        //    .UseSqlServer("Server=localhost;Database=StoreHub;Trusted_Connection=True;TrustServerCertificate=True;")
-        //    .Options;
-
-        //    using var context = new AppDbContext(options);
-
-
-        //    var peaple = context.People.ToList();
-
-        //    return Ok(peaple);
-
-
-        //}
-
-        [HttpGet("GetPeople")]
-        public IActionResult GetPeople()
+        private readonly IAuthorizationService _authorizationService;
+        public PeopleController(IAuthorizationService authorizationService)
         {
-
-            var options = new DbContextOptionsBuilder<AppDbContext>()
-            .UseSqlServer("Server=localhost;Database=StoreHub;Trusted_Connection=True;TrustServerCertificate=True;")
-            .Options;
-
-
-            using var context = new AppDbContext(options);
-
-            var data = context.People.Where(p => p.PersonId == 1).Select(p => new {p.FirstName , p.LastName, p.BirthDate,p.RegisterAt,p.IsMale,p.IsAdmin,p.CountryId }).ToList();
-
-            return Ok(data);
+            _authorizationService = authorizationService;
         }
 
-        [HttpGet("GetPersonWithStores")]
-        public IActionResult GetPersonWithStores()
+        [HttpPut("EditPersonInfo")]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        public async Task<ActionResult<bool>> EditPersonInfo(DTO_PersonEdit newData)
         {
-            var options = new DbContextOptionsBuilder<AppDbContext>()
-                .UseSqlServer("Server=localhost;Database=StoreHub;Trusted_Connection=True;TrustServerCertificate=True;")
-                .Options;
+            if(string.IsNullOrWhiteSpace(newData.Address) || string.IsNullOrWhiteSpace(newData.PhoneNumber) || string.IsNullOrWhiteSpace(newData.FirstName) ||
+                string.IsNullOrWhiteSpace(newData.LastName) || newData.PersonID <=0 || newData.CountryID <= 0)
+            {
+                return BadRequest("Data not accepted");
+            }
 
-            using var context = new AppDbContext(options);
 
-            var data = context.People
-                .Where(p => p.PersonId == 1)
-                .Select(p => new
-                {
-                    p.PersonId,
-                    FullName = p.FirstName + " " + p.LastName,
+            if (!await clsUtilty.CheckOwnerPolicy(User, _authorizationService, newData.PersonID))
+            {
+                return Forbid();
+            }
 
-                    Stores = p.Stores.Select(s => new
-                    {
-                        s.StoreId,
-                        s.StoreName
-                    }).ToList()
-                })
-                .ToList();
 
-            return Ok(data);
+            try
+            {
+                bool res = await People.EditPersonInfo(newData);
+                if (!res)
+                    return NotFound();
+
+                return Ok(true);
+            }
+            catch 
+            {
+                throw;
+            }
         }
 
 
-        [HttpGet("GetStoreWithPerson")]
-        public IActionResult GetStoreWithPerson()
+        [HttpGet("IsEmailRegisteredByAnotherPerson")]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        public async Task<ActionResult<bool>> IsEmailRegisteredByAnotherPerson([FromQuery] string email, [FromQuery] int personId)
         {
-            var options = new DbContextOptionsBuilder<AppDbContext>()
-                .UseSqlServer("Server=localhost;Database=StoreHub;Trusted_Connection=True;TrustServerCertificate=True;")
-                .Options;
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                return BadRequest("Data not accepted");
+            }
 
-            using var context = new AppDbContext(options);
+            if (!await clsUtilty.CheckOwnerPolicy(User, _authorizationService, personId))
+            {
+                return Forbid();
+            }
 
-            var data = context.Stores
-                .Where(s => s.StoreId == 1)
-                .Select(s => new
-                {
-                    s.StoreId,
-                    s.StoreName,
+            bool res = await People.IsEmailRegisteredByAnotherPerson(
+                email,
+                personId
+            );
 
-                    Person = new
-                    {
-                        s.Person.PersonId,
-                        FullName = s.Person.FirstName + " " + s.Person.LastName
-                    }
-                })
-                .ToList();
+            return Ok(res);
+        }
+        [HttpGet("IsEmailRegisteredByAnyOne")]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        public async Task<ActionResult<bool>> IsEmailRegisteredByAnyOne([FromQuery] string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                return BadRequest("Data not accepted");
+            }
 
-            return Ok(data);
+            int personId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+
+            if (!await clsUtilty.CheckOwnerPolicy(User, _authorizationService, personId))
+            {
+                return Forbid();
+            }
+
+            bool res = await People.IsEmailRegisteredByAnyOne(
+                email
+            );
+
+            return Ok(res);
         }
 
-
-        [HttpGet("GetProductWithStoreAndCategory")]
-        public IActionResult GetProductWithStoreAndCategory()
+        [HttpGet("IsPhoneRegisteredByAnotherPerson")]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        public async Task<ActionResult<bool>> IsPhoneRegisteredByAnotherPerson([FromQuery] string phone, [FromQuery] int personId)
         {
-            var options = new DbContextOptionsBuilder<AppDbContext>()
-                .UseSqlServer("Server=localhost;Database=StoreHub;Trusted_Connection=True;TrustServerCertificate=True;")
-                .Options;
+            if (string.IsNullOrWhiteSpace(phone))
+            {
+                return BadRequest("Data not accepted");
+            }
 
-            using var context = new AppDbContext(options);
+            if (!await clsUtilty.CheckOwnerPolicy(User, _authorizationService, personId))
+            {
+                return Forbid();
+            }
 
-            var data = context.Products
-                .Where(p => p.ProductId == 1)
-                .Select(p => new
-                {
-                    p.ProductId,
-                    p.Name,
-                    p.Price,
-                    p.StockQuantity,
+            bool res = await People.IsPhoneRegisteredByAnotherPerson(
+                phone,
+                personId
+            );
 
-                    Store = new
-                    {
-                        p.Store.StoreId,
-                        p.Store.StoreName
-                    },
-
-                    Category = new
-                    {
-                        p.Category.CategoryId,
-                        p.Category.Name
-                    }
-                })
-                .ToList();
-
-            return Ok(data);
+            return Ok(res);
         }
 
-        [HttpGet("GetProductWithImages")]
-        public IActionResult GetProductWithImages()
+        [HttpGet("IsPhoneRegisteredByAnyOne")]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        public async Task<ActionResult<bool>> IsPhoneRegisteredByAnyOne([FromQuery] string phone)
         {
-            var options = new DbContextOptionsBuilder<AppDbContext>()
-                .UseSqlServer("Server=localhost;Database=StoreHub;Trusted_Connection=True;TrustServerCertificate=True;")
-                .Options;
+            if (string.IsNullOrWhiteSpace(phone))
+            {
+                return BadRequest("Data not accepted");
+            }
 
-            using var context = new AppDbContext(options);
+            int personId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
 
-            var data = context.Products
-                .Where(p => p.ProductId == 1)
-                .Select(p => new
-                {
-                    p.ProductId,
-                    p.Name,
+            if (!await clsUtilty.CheckOwnerPolicy(User, _authorizationService, personId))
+            {
+                return Forbid();
+            }
 
-                    Images = p.ProductImages.Select(i => new
-                    {
-                        i.ProductImageId,
-                        i.ImagePath
-                    }).ToList()
-                })
-                .ToList();
+            bool res = await People.IsPhoneRegisteredByAnyOne(
+                phone
+            );
 
-            return Ok(data);
-        }
-
-        [HttpGet("GetOrderDetails")]
-        public IActionResult GetOrderDetails()
-        {
-            var options = new DbContextOptionsBuilder<AppDbContext>()
-                .UseSqlServer("Server=localhost;Database=StoreHub;Trusted_Connection=True;TrustServerCertificate=True;")
-                .Options;
-
-            using var context = new AppDbContext(options);
-
-            var data = context.Orders
-                .Where(o => o.OrderId == 1)
-                .Select(o => new
-                {
-                    o.OrderId,
-                    o.OrderDate,
-                    o.TotalAmount,
-
-                    Person = new
-                    {
-                        o.Person.PersonId,
-                        FullName = o.Person.FirstName + " " + o.Person.LastName
-                    },
-
-                    OrderStatus = new
-                    {
-                        o.OrderStatus.OrderStatusId,
-                        o.OrderStatus.Name
-                    },
-
-                    Items = o.Items.Select(i => new
-                    {
-                        i.OrderItemId,
-                        i.Quantity,
-                        i.UnitPrice,
-
-                        Product = new
-                        {
-                            i.Product.ProductId,
-                            i.Product.Name
-                        }
-                    }).ToList()
-                })
-                .ToList();
-
-            return Ok(data);
+            return Ok(res);
         }
 
 

@@ -1,4 +1,4 @@
-﻿using Shop_Desktop_Business;
+﻿using Shop_Desktop_Business.Products;
 using StoreHub_DTOs.Reviews;
 using System;
 using System.Collections.Generic;

@@ -1,4 +1,8 @@
-﻿using Shop_Desktop_Business;
+﻿using Shop_Desktop_Business.Cart;
+using Shop_Desktop_Business.Products;
+using StoreHub_Desktop.Classes;
+using StoreHub_Desktop.Forms.Cart;
+using StoreHub_Desktop.Forms.Global;
 using StoreHub_Desktop.Forms.Prouducts;
 using StoreHub_DTOs.Products;
 using System;
@@ -17,25 +21,32 @@ namespace StoreHub_Desktop.User_Controls.Products
     public partial class uctrlProductSamary : UserControl
     {
         public Action OnItemAddedToCart;
+        public Action OnBuyNow;
 
         public Action<int> OnCartItemChanges;
 
 
-        int id = 0;
+        public bool _clickOn = true;
+
+        public bool CanClick = true;
+
+        int _productId;
         public uctrlProductSamary()
         {
             InitializeComponent();
+
             OnClick(this);
         }
 
         void OnClick(Control parent)
         {
-            foreach(Control ctrl in parent.Controls)
+            foreach (Control ctrl in parent.Controls)
             {
-               
-              OnClick(ctrl);
 
-                ctrl.Click += async (s, e) => await OpenProductsDetails();
+                OnClick(ctrl);
+
+                if (ctrl != btnAddToCart && ctrl != btnBuyNow)
+                    ctrl.Click += async (s, e) => await OpenProductsDetails();
 
             }
         }
@@ -52,15 +63,16 @@ namespace StoreHub_Desktop.User_Controls.Products
         {
             lblProductName.Text = product.ProductName;
             lblProductCategory.Text = product.CategoryName;
-            lblPrice.Text = product.Price.ToString("N2");
+            lblPrice.Text = "$" +product.Price.ToString("N2");
 
             SetRatingData(product.TotalRating.Value, product.RatingAverage.Value);
 
+            clsUtilty.LoadProductImage(pbProductImage, product.ImagePath);
 
-            id = product.ProductID;
+            _productId = product.ProductID;
         }
 
-        void SetRatingData(int totalRating,decimal ratingAvg)
+        void SetRatingData(int totalRating, decimal ratingAvg)
         {
             lblTotalRating.Text = $"({totalRating})";
             lblRatingAvg.Text = ratingAvg.ToString();
@@ -68,11 +80,11 @@ namespace StoreHub_Desktop.User_Controls.Products
             guna2RatingStar1.Value = (float)ratingAvg;
         }
 
-       async Task<DTO_ProductsDetails> GetDetails()
+        async Task<DTO_ProductsDetails> GetDetails()
         {
             try
             {
-                DTO_ProductsDetails details = await clsProducts.GetProductsDetailsById(id);
+                DTO_ProductsDetails details = await clsProducts.GetProductsDetailsById(_productId);
 
                 if (details != null)
                 {
@@ -90,29 +102,92 @@ namespace StoreHub_Desktop.User_Controls.Products
 
         async Task OpenProductsDetails()
         {
-            try
+
+            if (!CanClick)
+                return;
+
+            _clickOn = false;
+            DTO_ProductsDetails details = await GetDetails();
+
+            if (details != null)
             {
-                DTO_ProductsDetails details = await GetDetails();
+                frmProductsDetails frm = new frmProductsDetails();
 
-                if (details != null)
-                {
-                    frmProductsDetails frm = new frmProductsDetails();
+                frm.OnReviewsRefresh += SetRatingData;
+                frm.OnBuyNow += () => OnBuyNow?.Invoke();
+                frm.OnItemAddedToCart += () => OnItemAddedToCart?.Invoke();
+                frm.OnViewCartOpnnedThenItemDeleted += (c) => { OnCartItemChanges?.Invoke(c); };
+                await frm.SetData(details);
 
-                   frm.OnReviewsRefresh += SetRatingData;
-                   frm.OnItemAddedToCart += () => OnItemAddedToCart?.Invoke();
-                   frm.OnViewCartOpnnedThenItemDeleted += (c) => { OnCartItemChanges?.Invoke(c); };
-                   await frm.SetData(details);
-
-                    frm.ShowDialog();
-                }
-
+                frm.ShowDialog();
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+
+
+            _clickOn = true;
         }
 
+        private async void btnAddToCart_Click(object sender, EventArgs e)
+        {
+            btnAddToCart.Enabled = false;
+            await AddItem();
+        }
 
+        async Task<bool> AddItem(bool showAdded = true)
+        {
+            btnAddToCart.Enabled = false;
+            try
+            {
+                bool res = await clsCart.AddItemToCart(_productId);
+                if(res)
+                { 
+                    OnItemAddedToCart?.Invoke();
+                    btnAddToCart.Enabled = true;
+                }
+                else
+                {
+                    clsUtilty.PrintWarn("No stock avalible");
+                    return false;
+                }
+
+                if(showAdded)
+                await OpenProdectAddedForm();
+
+            }
+            catch
+            {
+                clsUtilty.PrintWarn("Error while adding the product");
+            }
+            return true;
+
+        }
+
+        async Task OpenProdectAddedForm()
+        {
+
+            frmProductAddedToCart frm = new frmProductAddedToCart();
+            frm.OnClickViewCart += () => { OpenCart(); };
+            await frm.SetData(_productId);
+            frm.ShowDialog();
+        }
+
+        void OpenCart()
+        {
+            Hide();
+            frmCart frm = new frmCart();
+            frm.OnCartCountChanges += (c) => { OnCartItemChanges?.Invoke(c); };
+            frm.ShowDialog();
+        }
+
+        private async void btnBuyNow_Click(object sender, EventArgs e)
+        {
+            btnBuyNow.Enabled = false;
+            bool res = await AddItem(false);
+            if (res)
+            {
+                OnBuyNow?.Invoke();
+                btnBuyNow.Enabled = true;
+            }
+
+        }
     }
 }

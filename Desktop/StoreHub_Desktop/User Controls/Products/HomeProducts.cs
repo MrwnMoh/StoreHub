@@ -1,4 +1,4 @@
-﻿using Shop_Desktop_Business;
+﻿using Shop_Desktop_Business.Products;
 using StoreHub_Desktop.Classes;
 using System;
 using System.Collections.Generic;
@@ -16,7 +16,13 @@ namespace StoreHub_Desktop.User_Controls.Products
     {
 
         public Action OnItemAddedToCart;
+        public Action OnBuyNow;
+
+        public Action OnViewAllProduct;
+
+
         public Action<int> OnCartItemChanges;
+        public Action<int> OnViewCartOpnnedThenItemDeleted;
 
         public HomeProducts()
         {
@@ -42,6 +48,7 @@ namespace StoreHub_Desktop.User_Controls.Products
                         uctrlProductSamary uc = new uctrlProductSamary();
 
                         uc.OnItemAddedToCart += () => OnItemAddedToCart?.Invoke();
+                        uc.OnBuyNow += () => OnBuyNow?.Invoke();
                         uc.OnCartItemChanges += (c) => OnCartItemChanges?.Invoke(c);
                         uc.Margin = new Padding(10, 8, 10, 0);
 
@@ -79,6 +86,11 @@ namespace StoreHub_Desktop.User_Controls.Products
 
         private void uctrlProductSamary4_Load(object sender, EventArgs e)
         {
+        }
+
+        private void lblViewAllBtn_Click(object sender, EventArgs e)
+        {
+            OnViewAllProduct?.Invoke();
         }
     }
 }

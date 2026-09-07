@@ -25,6 +25,10 @@ namespace StoreHub_Desktop.Forms.Global
 
         public async Task SetData(int productId)
         {
+            uctrlProductSamary1.CanClick = false;
+            uctrlProductSamary1.btnAddToCart.Visible = false;
+            uctrlProductSamary1.btnBuyNow.Visible = false;
+
             await uctrlProductSamary1.SetDataById(productId);
 
             int quantity = await clsCart.GetItemQuantity(productId);
@@ -45,7 +49,7 @@ namespace StoreHub_Desktop.Forms.Global
 
         private void btnViewCart_Click(object sender, EventArgs e)
         {
-
+            btnViewCart.Enabled = false;
             Hide();
             OnClickViewCart?.Invoke();
             

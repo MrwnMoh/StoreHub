@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Forms\Admin\frmAddEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\Cart\frmCart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -10,16 +13,94 @@
     <Compile Update="Forms\Cart\frmProductAddedToCart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\Login.cs">
+    <Compile Update="Forms\Global\frmLogout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\frmMainApp.cs">
+    <Compile Update="Forms\Global\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Global\frmMainApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Menu\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\Prouducts\frmProductsDetails.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\Seller\frmAddEditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Seller\frmChangeStoreOrAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Seller\frmCreateStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="User Controls\Admin\Stores\uctrlStores.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Admin\Stores\uctrlStoreRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Admin\uctrl_AdminAnalisesSquare.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Admin\uctrl_AdminDashboardSummary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Admin\uctrl_AdminMainDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Admin\Users\uctrlIsActive.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Admin\Users\UctrlUserRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Admin\Users\uctrUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="User Controls\BigBanner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Menu\MyProfile\uctrlUserDetailsCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Menu\MyProfile\uctrlUserDetailsRowsWithEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Menu\MyProfile\uctrlMyProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\Order\frmOrderDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="User Controls\Order\uctrlCheckOut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Order\uctrlOrderRowSummary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Order\uctrlOrderStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Order\uctrlOrderSummary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Order\uctrlPaymentMethod.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Order\uctrlSelectOrderAddress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Order\uctrl_MyOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Products\Category\uctrlProductCategoryRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Products\Category\uctrlProductCategorySquere.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="User Controls\Products\HomeProducts.cs">
@@ -31,10 +112,52 @@
     <Compile Update="User Controls\Products\Reviews\uctrlWriteAReview.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="User Controls\Products\Reviews\uctrl_MyReviewView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Products\Reviews\uctrl_ViewAllMyReviews.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="User Controls\Products\uctrlProductInCart.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="User Controls\Products\uctrlProductInCartSummary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="User Controls\Products\uctrlProductSamary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Products\uctrlProductSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Products\uctrlViewAllProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Seller\Orders\uctrlStoreOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Seller\Products\uctrlSellerProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Seller\Products\uctrl_SellerProductRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Seller\Reviews\uctrl_StoreReviews.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Seller\uctrlSqueareStoreCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Seller\uctrlStoreSammaryDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Seller\uctrl_CurrentShop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Seller\uctrl_NoStore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User Controls\Seller\uctrl_Seller_MainDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

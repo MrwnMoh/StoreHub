@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +19,8 @@ namespace StoreHub_Data.Entities
 
         public int StoreId { get; set; }
 
+        public bool IsDeleted { get; set; }
+
         public int StockQuantity { get; set; }
 
         public decimal Price { get; set; }
@@ -29,6 +31,7 @@ namespace StoreHub_Data.Entities
 
         public virtual List<Review>? Reviews { get; set; }
 
+        public virtual List<OrderItem>? OrderItems { get; set; }
 
         public virtual List<ProductImage>? ProductImages { get; set; }
 

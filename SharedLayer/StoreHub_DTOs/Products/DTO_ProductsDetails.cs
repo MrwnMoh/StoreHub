@@ -21,15 +21,14 @@ namespace StoreHub_DTOs.Products
 
         public List<string>? Images { get; set; }
 
-        //public int? TotalRating { get; set; }
-
-        //public float? RatingAverage { get; set; }
-
         public List<DTO_Reviews>? Reviews { get; set; }
 
-        public bool InStock { get; set; }
-
         public int ProductId { get; set; }
+
+        public int StockQuantity { get; set; }
+
+        public int StoreId { get; set; }
+
 
 
     }

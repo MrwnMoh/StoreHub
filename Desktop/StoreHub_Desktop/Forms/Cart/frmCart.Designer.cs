@@ -33,7 +33,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblBtnExit = new Label();
-            guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            btnCheckout = new Guna.UI2.WinForms.Guna2GradientButton();
             guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             lblProductName = new Label();
             lblCartItemsCount = new Label();
@@ -47,35 +47,37 @@
             // lblBtnExit
             // 
             lblBtnExit.AutoSize = true;
-            lblBtnExit.Font = new Font("Nunito", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblBtnExit.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblBtnExit.ForeColor = Color.FromArgb(64, 64, 64);
             lblBtnExit.Location = new Point(588, 9);
             lblBtnExit.Name = "lblBtnExit";
-            lblBtnExit.Size = new Size(38, 44);
+            lblBtnExit.Size = new Size(37, 37);
             lblBtnExit.TabIndex = 1;
             lblBtnExit.Text = "×";
             lblBtnExit.Click += lblBtnExit_Click;
             // 
-            // guna2GradientButton1
+            // btnCheckout
             // 
-            guna2GradientButton1.Animated = true;
-            guna2GradientButton1.BorderRadius = 10;
-            guna2GradientButton1.CustomizableEdges = customizableEdges1;
-            guna2GradientButton1.DisabledState.BorderColor = Color.DarkGray;
-            guna2GradientButton1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2GradientButton1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2GradientButton1.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
-            guna2GradientButton1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2GradientButton1.FillColor = Color.FromArgb(95, 77, 214);
-            guna2GradientButton1.FillColor2 = Color.FromArgb(63, 41, 202);
-            guna2GradientButton1.Font = new Font("Nunito", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2GradientButton1.ForeColor = Color.White;
-            guna2GradientButton1.Location = new Point(32, 806);
-            guna2GradientButton1.Name = "guna2GradientButton1";
-            guna2GradientButton1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2GradientButton1.Size = new Size(580, 51);
-            guna2GradientButton1.TabIndex = 33;
-            guna2GradientButton1.Text = "Checkout";
+            btnCheckout.Animated = true;
+            btnCheckout.BorderRadius = 10;
+            btnCheckout.CustomizableEdges = customizableEdges1;
+            btnCheckout.DisabledState.BorderColor = Color.DarkGray;
+            btnCheckout.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCheckout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCheckout.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            btnCheckout.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCheckout.Enabled = false;
+            btnCheckout.FillColor = Color.FromArgb(95, 77, 214);
+            btnCheckout.FillColor2 = Color.FromArgb(63, 41, 202);
+            btnCheckout.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCheckout.ForeColor = Color.White;
+            btnCheckout.Location = new Point(32, 806);
+            btnCheckout.Name = "btnCheckout";
+            btnCheckout.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnCheckout.Size = new Size(580, 51);
+            btnCheckout.TabIndex = 33;
+            btnCheckout.Text = "Checkout";
+            btnCheckout.Click += guna2GradientButton1_Click;
             // 
             // guna2Separator1
             // 
@@ -147,7 +149,7 @@
             guna2GradientButton2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2GradientButton2.FillColor = Color.Transparent;
             guna2GradientButton2.FillColor2 = Color.Transparent;
-            guna2GradientButton2.Font = new Font("Nunito", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2GradientButton2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2GradientButton2.ForeColor = Color.FromArgb(95, 77, 214);
             guna2GradientButton2.Location = new Point(32, 873);
             guna2GradientButton2.Name = "guna2GradientButton2";
@@ -184,7 +186,7 @@
             Controls.Add(lblCartItemsCount);
             Controls.Add(lblProductName);
             Controls.Add(guna2Separator1);
-            Controls.Add(guna2GradientButton1);
+            Controls.Add(btnCheckout);
             Controls.Add(lblBtnExit);
             Name = "frmCart";
             Text = "frmCart";
@@ -196,7 +198,7 @@
         #endregion
 
         private Label lblBtnExit;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnCheckout;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Label lblProductName;
         private Label lblCartItemsCount;

@@ -19,7 +19,7 @@ namespace StoreHub_Data.Entities
 
         public virtual Person Person {  get; set; }
 
-        public virtual List<Product> Products { get; set; }
+        public virtual List<Product>? Products { get; set; }
 
 
     }

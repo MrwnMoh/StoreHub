@@ -11,3 +11,16 @@ E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\Sto
 E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\refint\StoreHub_DTOs.dll
 E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.pdb
 E:\Marwan\My projects\C#\StoreHub\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\ref\StoreHub_DTOs.dll
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\SharedLayer\StoreHub_DTOs\bin\Debug\net8.0\StoreHub_DTOs.deps.json
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\SharedLayer\StoreHub_DTOs\bin\Debug\net8.0\StoreHub_DTOs.dll
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\SharedLayer\StoreHub_DTOs\bin\Debug\net8.0\StoreHub_DTOs.pdb
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.csproj.AssemblyReference.cache
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.AssemblyInfoInputs.cache
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.AssemblyInfo.cs
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.csproj.CoreCompileInputs.cache
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.sourcelink.json
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.dll
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\refint\StoreHub_DTOs.dll
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\StoreHub_DTOs.pdb
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\SharedLayer\StoreHub_DTOs\obj\Debug\net8.0\ref\StoreHub_DTOs.dll

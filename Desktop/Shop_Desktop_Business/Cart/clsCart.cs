@@ -19,9 +19,18 @@ namespace Shop_Desktop_Business.Cart
         {
             try
             {
-                var cart = await clsDefultes.Client.GetFromJsonAsync<DTO_Cart>($"Cart/{personId}");
 
-                return cart;
+
+                var response = await clsDefultes.Client.GetAsync($"Cart/{personId}");
+
+                if(response.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    var cart = await response.Content.ReadFromJsonAsync<DTO_Cart>();
+
+                    if (cart != null)
+                        return cart;
+                }
+                return null;
             }
             catch
             {

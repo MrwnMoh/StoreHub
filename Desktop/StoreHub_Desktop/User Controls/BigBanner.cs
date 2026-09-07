@@ -14,6 +14,7 @@ namespace StoreHub_Desktop.User_Controls
     public partial class BigBanner : UserControl
     {
 
+        public Action<int> OnClick;
 
         public enum EBannars
         {
@@ -92,6 +93,28 @@ namespace StoreHub_Desktop.User_Controls
                 {
                     _imageCount = 0;
                 }
+            }
+        }
+
+        private void pbImage_Click(object sender, EventArgs e)
+        {
+            switch (BannarImage)
+            {
+                case EBannars.Electornics:
+                    OnClick?.Invoke(1);
+                    break;
+                case EBannars.Clothes:
+                    OnClick?.Invoke(7);
+                    break;
+                case EBannars.furniture:
+                    OnClick?.Invoke(6);
+                    break;
+                case EBannars.Books:
+                    OnClick?.Invoke(18);
+                    break;
+                default:
+                    OnClick?.Invoke(0);
+                    break;
             }
         }
     }

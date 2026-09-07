@@ -15,14 +15,18 @@ namespace StoreHub_DTOs.Products
 
         public string CategoryName { get; set; }
 
+        public int CategoryId { get; set; }
+
         public string? ImagePath { get; set; }
 
         public int? TotalRating { get; set; }
 
         public decimal? RatingAverage { get; set; }
 
+        public int Stock {  get; set; }
 
         public int ProductID { get; set; }
+
 
     }
 }

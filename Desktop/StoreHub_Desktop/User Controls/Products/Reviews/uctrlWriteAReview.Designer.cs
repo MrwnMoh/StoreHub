@@ -77,7 +77,7 @@
             btnPost.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnPost.FillColor = Color.FromArgb(95, 77, 214);
             btnPost.FillColor2 = Color.FromArgb(63, 41, 202);
-            btnPost.Font = new Font("Helvetica Rounded", 11.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPost.Font = new Font("Microsoft Sans Serif", 11.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnPost.ForeColor = Color.White;
             btnPost.Location = new Point(712, 102);
             btnPost.Name = "btnPost";
@@ -155,6 +155,7 @@
             guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges5;
             guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CirclePictureBox1.Size = new Size(50, 50);
+            guna2CirclePictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2CirclePictureBox1.TabIndex = 0;
             guna2CirclePictureBox1.TabStop = false;
             // 

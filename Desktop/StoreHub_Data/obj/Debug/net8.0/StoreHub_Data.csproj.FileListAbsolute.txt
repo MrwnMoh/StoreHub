@@ -33,3 +33,21 @@ E:\Marwan\My projects\C#\StoreHub\Desktop\StoreHub_Data\obj\Debug\net8.0\refint\
 E:\Marwan\My projects\C#\StoreHub\Desktop\StoreHub_Data\obj\Debug\net8.0\StoreHub_Data.pdb
 E:\Marwan\My projects\C#\StoreHub\Desktop\StoreHub_Data\obj\Debug\net8.0\StoreHub_Data.genruntimeconfig.cache
 E:\Marwan\My projects\C#\StoreHub\Desktop\StoreHub_Data\obj\Debug\net8.0\ref\StoreHub_Data.dll
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\Desktop\StoreHub_Data\bin\Debug\net8.0\StoreHub_Data.deps.json
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\Desktop\StoreHub_Data\bin\Debug\net8.0\StoreHub_Data.runtimeconfig.json
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\Desktop\StoreHub_Data\bin\Debug\net8.0\StoreHub_Data.dll
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\Desktop\StoreHub_Data\bin\Debug\net8.0\StoreHub_Data.pdb
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\Desktop\StoreHub_Data\bin\Debug\net8.0\StoreHub_DTOs.dll
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\Desktop\StoreHub_Data\bin\Debug\net8.0\StoreHub_DTOs.pdb
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\Desktop\StoreHub_Data\obj\Debug\net8.0\StoreHub_Data.csproj.AssemblyReference.cache
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\Desktop\StoreHub_Data\obj\Debug\net8.0\StoreHub_Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\Desktop\StoreHub_Data\obj\Debug\net8.0\StoreHub_Data.AssemblyInfoInputs.cache
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\Desktop\StoreHub_Data\obj\Debug\net8.0\StoreHub_Data.AssemblyInfo.cs
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\Desktop\StoreHub_Data\obj\Debug\net8.0\StoreHub_Data.csproj.CoreCompileInputs.cache
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\Desktop\StoreHub_Data\obj\Debug\net8.0\StoreHub_Data.sourcelink.json
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\Desktop\StoreHub_Data\obj\Debug\net8.0\StoreHub.65D510AC.Up2Date
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\Desktop\StoreHub_Data\obj\Debug\net8.0\StoreHub_Data.dll
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\Desktop\StoreHub_Data\obj\Debug\net8.0\refint\StoreHub_Data.dll
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\Desktop\StoreHub_Data\obj\Debug\net8.0\StoreHub_Data.pdb
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\Desktop\StoreHub_Data\obj\Debug\net8.0\StoreHub_Data.genruntimeconfig.cache
+C:\Users\moham\Marwan_Mahmoud\Marwan\Programing\Projects\C#\Clone\Desktop\StoreHub_Data\obj\Debug\net8.0\ref\StoreHub_Data.dll

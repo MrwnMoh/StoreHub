@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using StoreHub_Api.Classes;
 using StoreHub_Business.Cart;
@@ -13,6 +14,8 @@ using System.Security.Claims;
 namespace StoreHub_Api.Controllers
 {
     [Authorize]
+    [EnableRateLimiting("Cart")]
+
     [Route("api/Cart")]
     [ApiController]
     public class CartController : ControllerBase
@@ -50,6 +53,7 @@ namespace StoreHub_Api.Controllers
             {
                 var cart = await clsCart.GetCartByPersonID(PersonId);
 
+              
                 return Ok(cart);
             }
             catch (Exception ex)

@@ -1,8 +1,10 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Azure;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using StoreHub_Data.Entities;
 using StoreHub_DTOs.Login;
 using StoreHub_DTOs.People;
+using StoreHub_Business.People;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -28,10 +30,10 @@ namespace StoreHub_Business.Other
         {
             DTO_LoginResponse response = new DTO_LoginResponse();
             response.person = person;
+            response.AccessToken = await GenerateAccessToken(person);
             response.RefreshToken = GenerateRefreshToken();
-            response.AccessToken = await  GenerateAccessToken(person);
-            response.RefreshTokenRevokedAt = null;
-            response.RefreshTokenExpiresAt = DateTime.UtcNow.AddDays(15);
+
+            await People.People.CreateOrUpdateRefreshToken(response.RefreshToken, response.person.PersonId);
 
             return response;
         }
@@ -88,12 +90,19 @@ namespace StoreHub_Business.Other
 
 
 
-        private string GenerateRefreshToken()
+        private DTO_RefreshToken GenerateRefreshToken()
         {
+
+            DTO_RefreshToken refreshToken = new DTO_RefreshToken();
             var bytes = new byte[64];
             using var rng = RandomNumberGenerator.Create();
             rng.GetBytes(bytes);
-            return Convert.ToBase64String(bytes);
+
+            refreshToken.RefreshToken = Convert.ToBase64String(bytes);
+            refreshToken.RefreshTokenRevokedAt = null;
+            refreshToken.RefreshTokenExpiresAt = DateTime.UtcNow.AddDays(15);
+
+            return refreshToken;
         }
 
 

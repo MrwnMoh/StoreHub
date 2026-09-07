@@ -146,12 +146,12 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Nunito", 14.2499981F, FontStyle.Bold);
+            label3.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Bold);
             label3.ForeColor = Color.FromArgb(46, 55, 68);
             label3.Location = new Point(3, 0);
             label3.Margin = new Padding(3, 0, 0, 0);
             label3.Name = "label3";
-            label3.Size = new Size(341, 26);
+            label3.Size = new Size(358, 24);
             label3.TabIndex = 41;
             label3.Text = "Are you sure you want to delete this \"";
             // 
@@ -159,12 +159,12 @@
             // 
             lblDeleteType.AutoSize = true;
             lblDeleteType.BackColor = Color.Transparent;
-            lblDeleteType.Font = new Font("Nunito", 14.2499981F, FontStyle.Bold);
+            lblDeleteType.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Bold);
             lblDeleteType.ForeColor = Color.Red;
-            lblDeleteType.Location = new Point(344, 0);
+            lblDeleteType.Location = new Point(361, 0);
             lblDeleteType.Margin = new Padding(0);
             lblDeleteType.Name = "lblDeleteType";
-            lblDeleteType.Size = new Size(69, 26);
+            lblDeleteType.Size = new Size(71, 24);
             lblDeleteType.TabIndex = 42;
             lblDeleteType.Text = "Object";
             // 
@@ -172,12 +172,12 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Nunito", 14.2499981F, FontStyle.Bold);
+            label2.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Bold);
             label2.ForeColor = Color.FromArgb(46, 55, 68);
-            label2.Location = new Point(416, 0);
+            label2.Location = new Point(435, 0);
             label2.Margin = new Padding(3, 0, 0, 0);
             label2.Name = "label2";
-            label2.Size = new Size(35, 26);
+            label2.Size = new Size(35, 24);
             label2.TabIndex = 43;
             label2.Text = "\" ?";
             // 
@@ -209,12 +209,12 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Nunito", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Silver;
+            label4.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.DarkGray;
             label4.Location = new Point(18, 133);
             label4.Margin = new Padding(3, 0, 0, 0);
             label4.Name = "label4";
-            label4.Size = new Size(220, 20);
+            label4.Size = new Size(235, 18);
             label4.TabIndex = 44;
             label4.Text = "This action cannot be undone.";
             // 
@@ -230,11 +230,11 @@
             // 
             lblBtnExit.AutoSize = true;
             lblBtnExit.BackColor = Color.Transparent;
-            lblBtnExit.Font = new Font("Nunito", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblBtnExit.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblBtnExit.ForeColor = Color.FromArgb(64, 64, 64);
             lblBtnExit.Location = new Point(648, 12);
             lblBtnExit.Name = "lblBtnExit";
-            lblBtnExit.Size = new Size(38, 44);
+            lblBtnExit.Size = new Size(37, 37);
             lblBtnExit.TabIndex = 1;
             lblBtnExit.Text = "×";
             lblBtnExit.Click += lblBtnExit_Click;

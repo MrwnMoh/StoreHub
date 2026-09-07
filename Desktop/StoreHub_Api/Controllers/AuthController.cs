@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.IdentityModel.Tokens;
-using StoreHub_Business;
 using StoreHub_Business.Other;
+using StoreHub_Business.People;
 using StoreHub_DTOs.Login;
 using StoreHub_DTOs.People;
 using System.IdentityModel.Tokens.Jwt;
@@ -16,6 +16,7 @@ using System.Text;
 namespace StoreHub_Api.Controllers
 {
 
+    [EnableRateLimiting("Auth")]
     [Route("api/Auth")]
     [ApiController]
     public class AuthController : ControllerBase
@@ -48,6 +49,7 @@ namespace StoreHub_Api.Controllers
                 return Unauthorized("Invalid Credentials.");
 
             DTO_LoginResponse response = await _tokens.GenrateLoginResponse(person);
+            response.person.PasswordHash = "";
 
             return response;
 
@@ -57,7 +59,25 @@ namespace StoreHub_Api.Controllers
         }
 
 
-      
+
+        [HttpPost("Logout")]
+        public async Task<ActionResult<bool>> Logout([FromBody] int personId)
+        {
+
+            if (personId <= 0)
+            {
+                return BadRequest("Credentials are required");
+            }
+
+            bool response = await People.Logout(personId);
+
+            return response;
+
+
+
+
+        }
+
 
     }
 }

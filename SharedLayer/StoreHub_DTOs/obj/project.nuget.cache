@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w+m21r4B94g=",
+  "dgSpecHash": "mgd1BjeMQZ4=",
   "success": true,
-  "projectFilePath": "E:\\Marwan\\My projects\\C#\\StoreHub\\SharedLayer\\StoreHub_DTOs\\StoreHub_DTOs.csproj",
+  "projectFilePath": "C:\\Users\\moham\\Marwan_Mahmoud\\Marwan\\Programing\\Projects\\C#\\Clone\\SharedLayer\\StoreHub_DTOs\\StoreHub_DTOs.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\moham\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.0\\microsoft.aspnetcore.authentication.jwtbearer.8.0.0.nupkg.sha512",

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             flpContaner = new FlowLayoutPanel();
-            lblProductName = new Label();
+            lblViewAllBtn = new Label();
             label1 = new Label();
             lblShowingInfo = new Label();
             SuspendLayout();
@@ -41,18 +41,19 @@
             flpContaner.Size = new Size(1502, 1412);
             flpContaner.TabIndex = 3;
             // 
-            // lblProductName
+            // lblViewAllBtn
             // 
-            lblProductName.AutoSize = true;
-            lblProductName.BackColor = Color.Transparent;
-            lblProductName.Cursor = Cursors.Hand;
-            lblProductName.Font = new Font("Nunito", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblProductName.ForeColor = Color.FromArgb(175, 153, 246);
-            lblProductName.Location = new Point(1402, 45);
-            lblProductName.Name = "lblProductName";
-            lblProductName.Size = new Size(89, 26);
-            lblProductName.TabIndex = 16;
-            lblProductName.Text = "View All";
+            lblViewAllBtn.AutoSize = true;
+            lblViewAllBtn.BackColor = Color.Transparent;
+            lblViewAllBtn.Cursor = Cursors.Hand;
+            lblViewAllBtn.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblViewAllBtn.ForeColor = Color.FromArgb(175, 153, 246);
+            lblViewAllBtn.Location = new Point(1402, 45);
+            lblViewAllBtn.Name = "lblViewAllBtn";
+            lblViewAllBtn.Size = new Size(86, 24);
+            lblViewAllBtn.TabIndex = 16;
+            lblViewAllBtn.Text = "View All";
+            lblViewAllBtn.Click += lblViewAllBtn_Click;
             // 
             // label1
             // 
@@ -85,7 +86,7 @@
             BackColor = Color.Transparent;
             Controls.Add(lblShowingInfo);
             Controls.Add(label1);
-            Controls.Add(lblProductName);
+            Controls.Add(lblViewAllBtn);
             Controls.Add(flpContaner);
             Name = "HomeProducts";
             Size = new Size(1512, 1525);
@@ -96,7 +97,7 @@
         #endregion
 
         private FlowLayoutPanel flpContaner;
-        private Label lblProductName;
+        private Label lblViewAllBtn;
         private Label label1;
         private Label lblShowingInfo;
     }

@@ -1,4 +1,5 @@
 ﻿using Shop_Desktop_Business.Other;
+using StoreHub_Desktop.Classes;
 using StoreHub_DTOs.Reviews;
 using System;
 using System.Collections.Generic;
@@ -33,6 +34,9 @@ namespace StoreHub_Desktop.User_Controls.Products.Reviews
             lblName.Text = clsDefultes.LogendUser.person.FirstName + " " + clsDefultes.LogendUser.person.LastName;
 
             lblDate.Text = DateTime.Now.ToShortDateString();
+
+            clsUtilty.LoadUserImage(ref guna2CirclePictureBox1, clsDefultes.LogendUser.person.ImagePath, clsDefultes.LogendUser.person.IsMale);
+
         }
 
         public void SetEditReviewData(DTO_ReviewsEdit edit)
@@ -48,7 +52,7 @@ namespace StoreHub_Desktop.User_Controls.Products.Reviews
 
         private void btnPost_Click(object sender, EventArgs e)
         {
-
+            btnPost.Enabled = false;
             if (!string.IsNullOrWhiteSpace(txbReview.Text))
             {
                 if (_isUpdateReview)
@@ -56,6 +60,8 @@ namespace StoreHub_Desktop.User_Controls.Products.Reviews
                 else
                 OnClickPost?.Invoke(txbReview.Text, (decimal)guna2RatingStar1.Value);
             }
+            btnPost.Enabled = true;
+
         }
 
         public void Clear()

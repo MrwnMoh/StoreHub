@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using StoreHub_Api.Authorization;
 using StoreHub_Business.Other;
+using StoreHub_Data.Classes.Other;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -59,7 +61,6 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Add services to the container.
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -105,9 +106,37 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
+
+
+builder.Services.AddRateLimiter(options =>
+{
+    options.AddFixedWindowLimiter("Auth", opt =>
+    {
+        opt.Window = TimeSpan.FromMinutes(1);
+        opt.PermitLimit = 5;
+        opt.QueueLimit = 0;
+    });
+
+    options.AddFixedWindowLimiter("Admin", opt =>
+    {
+        opt.Window = TimeSpan.FromMinutes(1);
+        opt.PermitLimit = 20;
+        opt.QueueLimit = 0;
+    });
+
+
+    options.AddFixedWindowLimiter("Cart", opt =>
+    {
+        opt.Window = TimeSpan.FromMinutes(1);
+        opt.PermitLimit = 50;
+        opt.QueueLimit = 0;
+    });
+
+
+});
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -117,11 +146,19 @@ if (app.Environment.IsDevelopment())
 app.UseCors("StoreHubCorsPolicy");
 
 
+
+app.UseRateLimiter();
+
+
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+using var context = Settings.CreateContext();
+
+context.Database.EnsureCreated();
 
 app.Run();

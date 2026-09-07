@@ -19,14 +19,12 @@ namespace StoreHub_Desktop.User_Controls.Products
         public Action<decimal> OnIncreaseQuantiy;
         public Action<decimal> OnDecreaseQuantiy;
 
-        public Action<Control,decimal> OnDelete;
+        public Action<Control, decimal> OnDelete;
 
 
         int _quantity;
         int _itemId;
-
-        bool _checkQuantity = false;
-        bool _OffInrease = false;
+        bool _noMoreStock = false;
 
         decimal _price;
 
@@ -34,90 +32,34 @@ namespace StoreHub_Desktop.User_Controls.Products
         {
             InitializeComponent();
         }
-
-        void OffTextInNumaric(Control parent)
-        {
-            foreach (Control control in parent.Controls)
-            {
-                if (control is TextBox textBox)
-                {
-                    textBox.ReadOnly = true;
-                    break;
-                }
-            }
-        }
-
         public void SetData(DTO_CartItem item)
         {
             lblPrice.Text = item.Price.ToString("N2");
             lblProductName.Text = item.ProductName;
 
-            nmcQuantity.Value = item.Quantity;
             _quantity = item.Quantity;
             _itemId = item.ItemID;
 
-            clsUtilty.SetProductImage(ref pbProductImage, item.ImagePath);
+
+            clsUtilty.LoadProductImage(pbProductImage, item.ImagePath);
 
             _price = item.Price;
-            _checkQuantity = true;
-            OffTextInNumaric(nmcQuantity);
-
-        }
 
 
-        private async void nmcQuantity_ValueChanged(object sender, EventArgs e)
-        {
-            if (_checkQuantity)
-            {
-                nmcQuantity.Enabled = false;
-                if (nmcQuantity.Value > _quantity)
-                {
-
-                    if (!_OffInrease)
-                    {
-                        bool res = await clsCart.IncreaseQuantity(_itemId);
-
-                        if (res)
-                        {
-                            OnIncreaseQuantiy?.Invoke(_price);
-                        }
-                        else
-                        {
-                            nmcQuantity.Value--;
-                            nmcQuantity.Maximum = _quantity;
-                            _OffInrease = true;
-                            clsUtilty.PrintWarn("No stock available from this seller");
-
-                        }
-                    }
-                    else
-                    {
-                        nmcQuantity.Value--;
-                        clsUtilty.PrintWarn("No stock available from this seller");
-                    }
-
-                }
-                else
-                {
-
-                    await clsCart.DecreaseItemQuantity(_itemId);
-
-                    _OffInrease = false;
-                    OnDecreaseQuantiy.Invoke(_price);
-                }
-                nmcQuantity.Enabled = true;
-
-                _quantity = (int)nmcQuantity.Value;
-            }
-
-
-
+            lblQuantity.Text = _quantity.ToString();
+            if (_quantity > 0)
+                BtnNegtave.Enabled = true;
         }
 
         private async void btnDelete_Click(object sender, EventArgs e)
         {
+            btnDelete.Enabled = false;
+            BtnNegtave.Enabled = false;
+            btnDelete.Enabled = false;
             await Delete();
-            OnDelete?.Invoke(this,_price * _quantity);
+            OnDelete?.Invoke(this, _price * _quantity);
+            BtnNegtave.Enabled = true;
+            btnDelete.Enabled = true;
         }
 
         async Task Delete()
@@ -125,6 +67,55 @@ namespace StoreHub_Desktop.User_Controls.Products
             await clsCart.DeleteItem(_itemId);
         }
 
+        private async void btnPlus_Click(object sender, EventArgs e)
+        {
+            btnPlus.Enabled = false;
+            BtnNegtave.Enabled = false;
+            btnDelete.Enabled = false;
+            if (!_noMoreStock)
+            {
+                bool res = await clsCart.IncreaseQuantity(_itemId);
 
+                if (res)
+                {
+                    OnIncreaseQuantiy?.Invoke(_price);
+                    btnPlus.Enabled = true;
+                    _quantity++;
+
+                    lblQuantity.Text = _quantity.ToString();
+                }
+                else
+                {
+                    _noMoreStock = true;
+                    clsUtilty.PrintWarn("No stock available from this seller");
+                }
+            }
+            else
+            {
+                clsUtilty.PrintWarn("No stock available from this seller");
+            }
+
+            BtnNegtave.Enabled = true;
+            btnDelete.Enabled = true;
+        }
+
+        private async void BtnNegtave_Click(object sender, EventArgs e)
+        {
+            BtnNegtave.Enabled = false;
+            btnPlus.Enabled = false;
+            btnDelete.Enabled = false;
+            if (_quantity > 0)
+            {
+                await clsCart.DecreaseItemQuantity(_itemId);
+                _noMoreStock = false;
+                OnDecreaseQuantiy.Invoke(_price);
+
+                _quantity--;
+                lblQuantity.Text = _quantity.ToString();
+                BtnNegtave.Enabled = true;
+            }
+            btnPlus.Enabled = true;
+            btnDelete.Enabled = true;
+        }
     }
 }

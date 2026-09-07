@@ -1,6 +1,7 @@
-﻿using Shop_Desktop_Business;
+﻿using Guna.UI2.WinForms;
 using Shop_Desktop_Business.Cart;
 using Shop_Desktop_Business.Other;
+using Shop_Desktop_Business.Products;
 using StoreHub_Desktop.Classes;
 using StoreHub_Desktop.Forms.Cart;
 using StoreHub_Desktop.Forms.Global;
@@ -27,15 +28,25 @@ namespace StoreHub_Desktop.Forms.Prouducts
 
         public Action OnItemAddedToCart;
 
+        public Action OnBuyNow;
+
+
         public Action<int> OnViewCartOpnnedThenItemDeleted;
 
 
         public Action<int, decimal> OnReviewsRefresh;
 
+        List<Guna2PictureBox> pictureBoxList = new List<Guna2PictureBox>();
 
         public frmProductsDetails()
         {
             InitializeComponent();
+
+
+            pictureBoxList.Add(pbImage1);
+            pictureBoxList.Add(pbImage2);
+            pictureBoxList.Add(pbImage3);
+            pictureBoxList.Add(pbImage4);
         }
 
 
@@ -45,7 +56,7 @@ namespace StoreHub_Desktop.Forms.Prouducts
             productID = product.ProductId;
             lblProductName.Text = product.ProductName;
             lblProductCategory.Text = product.CategoryName;
-            lblPrice.Text = product.Price.ToString("N2");
+            lblPrice.Text = "$" + product.Price.ToString("N2");
             lblTotalRating.Text = $"({product.Reviews.Count})" ?? "0";
             lblDescription.Text = product.Description;
             lblSeller.Text = product.SellerName;
@@ -59,16 +70,8 @@ namespace StoreHub_Desktop.Forms.Prouducts
 
 
 
-            if (product.Images != null)
-            {
-                foreach (var img in product.Images)
-                {
-                    if (File.Exists(img))
-                    {
-                        clsUtilty.SetProductImage(ref pbProductImage, img);
-                    }
-                }
-            }
+            clsUtilty.LoadProductImageFromList(pictureBoxList, product.Images);
+            clsUtilty.LoadFirstProductImageFromList(pbProductImage, product.Images);
 
             await SetReviews(product.Reviews);
 
@@ -122,7 +125,7 @@ namespace StoreHub_Desktop.Forms.Prouducts
             uctrlWriteaReview1.Clear();
             var reviews = await LoadReviews();
             await SetReviews(reviews);
-            OnReviewsRefresh?.Invoke(reviews.Count, reviews.Average(r => r.Rating));
+            OnReviewsRefresh?.Invoke(reviews.Count, reviews.Count == 0 ? 0 : reviews.Average(r => r.Rating));
         }
 
         async Task<List<DTO_Reviews>> LoadReviews()
@@ -160,29 +163,42 @@ namespace StoreHub_Desktop.Forms.Prouducts
 
         private void lblBtnExit_Click(object sender, EventArgs e)
         {
-            Hide();
+            Close();
         }
 
         private async void btnAddToCart_Click(object sender, EventArgs e)
         {
             btnAddToCart.Enabled = false;
             await AddItem();
-            btnAddToCart.Enabled = true;
         }
 
 
-        async Task AddItem()
+        async Task<bool> AddItem(bool showAdded = true)
         {
             try
             {
-                await clsCart.AddItemToCart(productID);
+                bool res = await clsCart.AddItemToCart(productID);
+                if (res)
+                {
+                    OnItemAddedToCart?.Invoke();
+                    btnAddToCart.Enabled = true;
+                }
+                else
+                {
+                    clsUtilty.PrintWarn("No stock avalible");
+                    return false;
+                }
                 OnItemAddedToCart?.Invoke();
-                await OpenProdectAddedForm();
+
+                if (showAdded)
+                    await OpenProdectAddedForm();
+
             }
             catch
             {
                 clsUtilty.PrintWarn("Error while adding the product");
             }
+            return true;
         }
 
         async Task OpenProdectAddedForm()
@@ -198,11 +214,28 @@ namespace StoreHub_Desktop.Forms.Prouducts
         {
             Hide();
             frmCart frm = new frmCart();
-            frm.OnCartCountChanges += (c) => { OnViewCartOpnnedThenItemDeleted?.Invoke(c); } ;
+            frm.OnCartCountChanges += (c) => { OnViewCartOpnnedThenItemDeleted?.Invoke(c); };
             frm.ShowDialog();
             Close();
         }
 
+        private async void btnButNow_Click(object sender, EventArgs e)
+        {
+            btnButNow.Enabled = false;
+            bool res = await AddItem(false);
+            if(res)
+            {
+                OnBuyNow?.Invoke();
+                Close();
+                btnButNow.Enabled = true;
+            }
+           
+           
+        }
 
+        private void pbImage3_Click_1(object sender, EventArgs e)
+        {
+            pbProductImage.ImageLocation = ((Guna2PictureBox)sender).ImageLocation;
+        }
     }
 }

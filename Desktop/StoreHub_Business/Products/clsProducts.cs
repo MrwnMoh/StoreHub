@@ -1,6 +1,7 @@
 ﻿using StoreHub_Data.Classes.Other;
 using StoreHub_Data.Classes.Products;
 using StoreHub_Data.Entities;
+using StoreHub_DTOs.Categories;
 using StoreHub_DTOs.Products;
 using StoreHub_DTOs.Reviews;
 using System;
@@ -30,6 +31,35 @@ namespace StoreHub_Business.Products
                 throw new Exception(ex.Message);
             }
         }
+
+        public static async Task<DTO_ProductsGetAllResponse> GetAllProducts(DTO_ProductsGetAll request)
+        {
+            try
+            {
+                var products = await ProductsData.GetAllProducts(request);
+
+                return products;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public static async Task<List<DTO_Category>> GetProductCategories()
+        {
+            try
+            {
+                var Categories = await ProductsData.GetProductCategories();
+
+                return Categories;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
 
         public static async Task<DTO_ProductsDetails> GetProductsDetailsById(int Id)
         {
@@ -129,6 +159,10 @@ namespace StoreHub_Business.Products
             }
         }
 
+        public static async Task<bool> DeleteProduct(int productId)
+        {
+          return await ProductsData.DeleteProduct(productId);
+        }
 
 
     }

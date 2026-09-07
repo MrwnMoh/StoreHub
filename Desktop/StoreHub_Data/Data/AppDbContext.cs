@@ -41,6 +41,7 @@ namespace StoreHub_Data.Data
 
             modelBuilder.Entity<Person>(entity =>
                 {
+                    entity.ToTable(tb => tb.UseSqlOutputClause(false));
 
                     entity.HasKey(e => e.PersonId).HasName("PK_Person");
 
@@ -67,6 +68,8 @@ namespace StoreHub_Data.Data
 
                 }
             );
+
+           
 
             modelBuilder.Entity<RefreshToken>(entity =>
             {
@@ -168,29 +171,42 @@ namespace StoreHub_Data.Data
 
             });
 
-            modelBuilder.Entity<OrderItem>(entity => { 
-            
-                entity.HasKey(e => e.OrderItemId).HasName("PK_OrderItems");
-
+            modelBuilder.Entity<OrderItem>(entity =>
+            {
+                entity.HasKey(e => e.OrderItemId)
+                      .HasName("PK_OrderItems");
 
                 entity.HasIndex(e => e.OrderId, "IX_OrderItems_OrderId");
                 entity.HasIndex(e => e.ProductId, "IX_OrderItems_ProductId");
 
-                entity.Property(e => e.Quantity).HasDefaultValue(1);
+                entity.Property(e => e.Quantity)
+                      .HasDefaultValue(1);
 
-                entity.ToTable(t => t.HasCheckConstraint("CK_OrderItems_UnitPrice","[UnitPrice] >= 0"));
-                entity.ToTable(t => t.HasCheckConstraint("CK_OrderItems_Quantity", "[Quantity] > 0"));
+                entity.ToTable(t =>
+                    t.HasCheckConstraint(
+                        "CK_OrderItems_UnitPrice",
+                        "[UnitPrice] >= 0"));
+
+                entity.ToTable(t =>
+                    t.HasCheckConstraint(
+                        "CK_OrderItems_Quantity",
+                        "[Quantity] > 0"));
 
                 entity.Property(e => e.UnitPrice)
                       .HasColumnType("decimal(18,2)")
                       .IsRequired();
 
-                entity.HasOne(e => e.Order).WithMany(e => e.Items).HasForeignKey(e => e.OrderId).HasConstraintName("FK_OrderItems_Orders");
-                
-                entity.HasOne(e => e.Product).WithMany().HasForeignKey(e => e.ProductId).HasConstraintName("FK_OrderItems_Products");
-            }
-            );
+                entity.HasOne(e => e.Order)
+                      .WithMany(e => e.Items)
+                      .HasForeignKey(e => e.OrderId)
+                      .HasConstraintName("FK_OrderItems_Orders");
 
+                entity.HasOne(e => e.Product)
+                      .WithMany(e => e.OrderItems)
+                      .HasForeignKey(e => e.ProductId)
+                      .OnDelete(DeleteBehavior.NoAction)
+                      .HasConstraintName("FK_OrderItems_Products");
+            });
             modelBuilder.Entity<Product>(entity =>
             {
                 entity.HasKey(e => e.ProductId)
@@ -204,6 +220,8 @@ namespace StoreHub_Data.Data
                 entity.Property(e => e.Name)
                       .HasMaxLength(150);
 
+
+
                 entity.Property(e => e.Description)
                       .HasMaxLength(500);
 
@@ -213,6 +231,9 @@ namespace StoreHub_Data.Data
 
                 entity.Property(e => e.StockQuantity)
                       .HasDefaultValue(0);
+
+                entity.Property(e => e.IsDeleted)
+                     .HasDefaultValue(0);
 
 
                 entity.ToTable(t =>
@@ -270,7 +291,7 @@ namespace StoreHub_Data.Data
                 entity.HasOne(e => e.Product)
                       .WithMany()
                       .HasForeignKey(e => e.ProductId)
-                      .HasConstraintName("FK_CartItems_Products");
+                      .HasConstraintName("FK_CartItems_Products").OnDelete(DeleteBehavior.NoAction);
 
                 entity.Property(e => e.Quantity)
                       .HasDefaultValue(1);
@@ -312,18 +333,21 @@ namespace StoreHub_Data.Data
                       .HasConstraintName("FK_Reviews_People");
 
                 entity.HasOne(e => e.Product)
-                      .WithMany(e => e.Reviews)
-                      .HasForeignKey(e => e.ProductId)
-                      .HasConstraintName("FK_Reviews_Products");
+      .WithMany(e => e.Reviews)
+      .HasForeignKey(e => e.ProductId)
+      .OnDelete(DeleteBehavior.NoAction)
+      .HasConstraintName("FK_Reviews_Products");
             });
 
             OnModelCreatingPartial(modelBuilder);
+
 
         }
 
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 
+       
 
     }
 }

@@ -1,16 +1,24 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.Extensions.Options;
 using StoreHub_Api.Classes;
 using StoreHub_Business.Products;
 using StoreHub_Data.Data;
+using StoreHub_DTOs.Categories;
 using StoreHub_DTOs.Products;
 using StoreHub_DTOs.Reviews;
+using System.Security.Claims;
 
 namespace StoreHub_Api.Controllers
 {
-    [Route("api/[controller]")]
+
+
+    [Authorize]
+    [EnableRateLimiting("Cart")]
+
+    [Route("api/Products")]
     [ApiController]
     public class ProductsController : ControllerBase
     {
@@ -37,6 +45,42 @@ namespace StoreHub_Api.Controllers
 
             return Ok(products);
         }
+
+
+        [HttpGet("GetAllProducts")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<List<DTO_ProductsSummary>>> GetAllProducts([FromQuery]DTO_ProductsGetAll request)
+        {
+            if (request.PageNumber > 0 && request.PageSize > 0 && request.CategoryId >= 0 )
+            {
+                var products = await clsProducts.GetAllProducts(request);
+
+                if (products == null)
+                    return NoContent();
+
+                return Ok(products);
+            }
+
+            return BadRequest();
+        }
+
+        [HttpGet("GetProductCategories")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<List<DTO_Category>>> GetProductCategories()
+        {
+                var Categories = await clsProducts.GetProductCategories();
+
+                if (Categories == null)
+                    return NotFound("No categories were found");
+
+                return Ok(Categories);
+
+        }
+
+
 
 
         [HttpGet("TotalProducts")]
@@ -206,6 +250,44 @@ namespace StoreHub_Api.Controllers
             }
 
         }
+
+
+        [HttpDelete("Product/{ProductId}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<bool>> DeleteProduct(int ProductId)
+        {
+            if (ProductId<= 0)
+            {
+                return BadRequest("Data not accepted");
+            }
+
+            int personId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+
+
+            if (!await clsUtilty.CheckOwnerPolicy(User, _authorizationService, personId))
+            {
+                return Forbid();
+            }
+
+
+            try
+            {
+                bool res = await clsProducts.DeleteProduct(ProductId);
+
+                return Ok(res);
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500);
+            }
+
+        }
+
 
 
     }

@@ -81,21 +81,25 @@ namespace StoreHub_Data.Classes.Cart
                         i.CartId == cart.CartId &&
                         i.ProductId == productId);
 
-                if (item == null)
+                int stock = await context.Products.Where(p => p.ProductId == productId).Select(p => p.StockQuantity).FirstOrDefaultAsync();
+
+                if(stock > 0)
                 {
-                    context.CartItems.Add(new CartItem
+                    if (item == null)
                     {
-                        CartId = cart.CartId,
-                        ProductId = productId
-                    });
+                        context.CartItems.Add(new CartItem
+                        {
+                            CartId = cart.CartId,
+                            ProductId = productId
+                        });
+                    }
+                    else
+                    {
+                        if(item.Quantity + 1 < stock)
+                            item.Quantity++;
+                    }
                 }
-                else
-                {
-                    item.Quantity++;
-                }
-
-
-
+                
 
 
                 return await context.SaveChangesAsync() == 1;

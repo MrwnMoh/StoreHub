@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Vu8zXyIQJA0=",
+  "dgSpecHash": "0ZA0KUxzXqs=",
   "success": true,
-  "projectFilePath": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Data\\StoreHub_Data.csproj",
+  "projectFilePath": "C:\\Users\\moham\\Marwan_Mahmoud\\Marwan\\Programing\\Projects\\C#\\Clone\\Desktop\\StoreHub_Data\\StoreHub_Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\moham\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

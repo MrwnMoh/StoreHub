@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SMXsM3/oDGQ=",
+  "dgSpecHash": "NeyLcvSNgpA=",
   "success": true,
-  "projectFilePath": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\StoreHub_Desktop.csproj",
+  "projectFilePath": "C:\\Users\\moham\\Marwan_Mahmoud\\Marwan\\Programing\\Projects\\C#\\Clone\\Desktop\\StoreHub_Desktop\\StoreHub_Desktop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\moham\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\credentialmanagement\\1.0.2\\credentialmanagement.1.0.2.nupkg.sha512",
@@ -45,9 +45,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "Package 'CredentialManagement 1.0.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
-      "projectPath": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\StoreHub_Desktop.csproj",
+      "projectPath": "C:\\Users\\moham\\Marwan_Mahmoud\\Marwan\\Programing\\Projects\\C#\\Clone\\Desktop\\StoreHub_Desktop\\StoreHub_Desktop.csproj",
       "warningLevel": 1,
-      "filePath": "E:\\Marwan\\My projects\\C#\\StoreHub\\Desktop\\StoreHub_Desktop\\StoreHub_Desktop.csproj",
+      "filePath": "C:\\Users\\moham\\Marwan_Mahmoud\\Marwan\\Programing\\Projects\\C#\\Clone\\Desktop\\StoreHub_Desktop\\StoreHub_Desktop.csproj",
       "libraryId": "CredentialManagement",
       "targetGraphs": [
         "net8.0-windows"
